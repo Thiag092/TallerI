@@ -14,3 +14,15 @@ h1 {
   font-weight: bold; /* negrito o fuerte*/
   text-align: center; /*alineación*/
 }
+
+.clasePrueba {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+}
+
+.pruebaDiv {
+  background-color: black;
+  color: white;
+}
