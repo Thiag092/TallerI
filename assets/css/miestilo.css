@@ -13,6 +13,7 @@ h1 {
   color: white;
   font-weight: bold; /* negrito o fuerte*/
   text-align: center; /*alineación*/
+  font-size: 35px;
 }
 
 .clasePrueba {
@@ -25,4 +26,28 @@ h1 {
 .pruebaDiv {
   background-color: black;
   color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: bold;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+a {
+  color: wheat;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
 }
