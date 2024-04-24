@@ -1,0 +1,15 @@
+p {
+    font-family: verdana; /*tipo de letras*/
+    text-align: justify; /*alineación del texto*/
+    color: #ccff00; /*color de la fuente*/
+    font-size: 20px; /*tamaño de la fuente*/
+    font-style: italic; /*estilo */
+    font-weight: bold; /* negrito o fuerte*/
+  }
+
+  h1 {
+    color: black;
+    font-weight: bold; /* negrito o fuerte*/
+    text-align: center; /*alineación*/
+    font-size: 35px;
+  }

@@ -1,0 +1,88 @@
+CRITICAL - 2024-04-16 16:26:49 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Home.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 16:26:55 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Home.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 16:27:01 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Home.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 16:27:28 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Home.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 16:28:28 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Home.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 16:28:41 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Home.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 16:28:42 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Home.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:48:43 --> Invalid file: "Plantillas/encabeezado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Plantillas/encabeezado.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Plantillas/encabeezado', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('Plantillas/encabeezado', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:49:02 --> Invalid file: "Plantillas/foooter.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Plantillas/foooter.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Plantillas/foooter', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('Plantillas/foooter')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

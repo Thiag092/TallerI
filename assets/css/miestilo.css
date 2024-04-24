@@ -1,34 +1,37 @@
-p {
-  font-family: verdana; /*tipo de letras*/
-  text-align: justify; /*alineación del texto*/
-  color: red; /*color de la fuente*/
-  font-size: 24 px; /*tamaño de la fuente*/
-  font-style: italic; /*estilo */
-  font-weight: bold; /* negrito o fuerte*/
-}
+
 body {
-  background-color: lightblue; /*color de fondo del body*/
-} /* color y alineación de la etiqueta h1*/
+ background-color: rgb(214,51,124);
+}
 h1 {
-  color: white;
-  font-weight: bold; /* negrito o fuerte*/
-  text-align: center; /*alineación*/
+  color: rgb(255, 255, 255);
+  font-weight: bold; 
+  text-align: center; 
   font-size: 35px;
+}
+
+ul li {
+  text-align: justify;
 }
 
 .clasePrueba {
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  color: black;
+  color: rgb(39, 84, 146);
 }
 
-.pruebaDiv {
-  background-color: black;
-  color: white;
+.bienvenido{
+  margin: 20px;
+  padding: 10px;
+  font-family: verdana;
+  text-align: justify; 
+    color: white; 
+  font-size: 20px; 
+  font-weight: bold;
 }
 
 nav {
+  background-color: rgb(22,7,72);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,16 +41,256 @@ nav {
   font-weight: bold;
 }
 
-ul li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-a {
-  color: wheat;
+.nav-link {
+  color: white !important;
   text-decoration: none;
 }
 
-a:hover {
-  color: red;
+.nav-link:hover {
+  color: rgb(214,51,124) !important;
+  text-decoration: underline;
+}
+
+.nav-item{
+  margin-right: 30px;
+}
+.nav-item:hover{
+  margin-right: 30px;
+  text-decoration: underline;
+}
+
+.logo{
+  background-color: rgb(22,7,72);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: bold;
+}
+.icono{
+  width: 100px;
+  height: 100px;
+}
+
+.NombreNegocio{
+  color:rgb(214,51,124);
+  font-size: 50px;
+}
+
+.Marca{
+  width: 250px;
+  height: 70px;
+}
+.textoFoot{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.carousel-inner > .item > img {
+  object-fit: scale-down;
+  height: 50vh;
+  width: 100%;
+  padding: 10px;
+
+}
+
+.tarjetaAzul .card {
+  border-radius: 15px; 
+  background-color:  rgb(22,7,72) ;
+}
+
+
+.carousel-item img {
+  border-radius: 10px; 
+}
+
+
+.tarjetaAzul .card-title {
+  color: white; 
+}
+
+#recienAgregados{
+  font-weight: bold;
+  color: rgb(22,7,72) !important;
+  justify-content: left;
+}
+
+
+.align-left {
+  text-align: left; 
+}
+
+.linea {
+  border: none;
+  border-top: 3px solid black; 
+  margin-left: 10px; 
+}
+
+.card-group{
+  margin: 10%;
+}
+
+.card.guitarra{
+  transition: all 0.3s;
+}
+
+.card.guitarra:hover{
+  transform: scale(1.04);
+}
+
+.card.guitarra .card-text {
+  text-align: justify; 
+  margin: 5px;
+}
+
+.card.guitarra .card-img-top {
+    transform: scale(0.9); 
+    border-radius: 3%;
+}
+
+
+.filosofiaText {
+  margin: 60px 20px 20px 20px;
+  padding: 10px;
+  font-family: verdana;
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: justify; 
+}
+
+.luthierImagen1 img {
+  border-radius: 15px; 
+}
+.iconos {
+  width: 30px; 
+  height: 30px; 
+}
+
+.iconosRedes{
+  width: 30px; 
+  height: 30px; 
+}
+.container-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+.descripcionSafft{
+  text-align: justify;
+}
+
+
+.container-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.staffP .card-text{
+  text-align: justify; 
+  margin: 5px;
+}
+.card.staffP .card-img-top{
+  transform: scale(0.9); 
+    border-radius: 50%;
+}
+
+.card.staffP .card-title{
+  color:rgb(22,7,72) !important;
+}
+
+.card.staff .card-text{
+  color:rgb(22,7,72) !important;
+}
+
+.container-fluid-terminos{
+   margin-top: 50px; 
+  margin-bottom: 50px; 
+  margin-left: 50px; 
+  margin-right: 50px; 
+}
+
+.luthier-terminos{
+  transform: scale(0.7); 
+    border-radius: 50%;
+    align-items: center;
+    
+}
+.container-fluid-terminos{
+  text-align: center;
+  color:rgb(22,7,72) !important;
+  display: flex;
+}
+.text-md-left {
+  text-align: left !important;
+}
+
+.text-info{
+  text-align: center;
+}
+
+.iconosRedes{
+  align-items: center;
+}
+.container-terminos{
+  text-align: justify;
+  padding: 7%;
+  
+}
+.metodosPago {
+  background-color: white;
+}
+
+.card li {
+  list-style-type: disc !important;
+  margin-bottom: 10px; 
+}
+
+
+.tiuloEnvio{
+  color: black;
+}
+
+form {
+  border: 2px solid #ccc; 
+  border-radius: 20px; 
+  padding: 20px;
+  margin: 5%;
+  margin-top: 3px !important;
+  margin-right: 50px !important; 
+  margin-left: 50px !important; 
+}
+.page-header{
+ padding: 10px;
+}
+.mapagoogle {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; 
+}
+
+.listasRedes{
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.listasRedes li{
+display: inline;
+margin-right: 30px;
+}
+.ultima{
+  text-align: center;
+  margin-top: 20px;
+  
 }
