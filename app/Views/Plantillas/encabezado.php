@@ -44,6 +44,10 @@
               <li class="nav-item">
                 <a class="nav-link" rel="noonpener noreforrever" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" rel="noonpener noreforrever" href="<?php echo base_url('login'); ?>">Ingreso</a>
+              </li>
               
               
             </ul>

@@ -40,6 +40,8 @@ $routes->get('/contacto', 'Home::contacto');
 
 $routes->get('/comercializacion', 'Home::comercializacion');
 
+$routes->get('/login', 'Home::login');
+
 
 /*
  * --------------------------------------------------------------------
