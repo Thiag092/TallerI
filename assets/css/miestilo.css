@@ -296,3 +296,11 @@ margin-right: 30px;
   margin-top: 20px;
   
 }
+
+.custom-card {
+  width: 400px; /* Define el ancho deseado */
+  margin: 0 auto; /* Centra horizontalmente */
+  margin-top: 50px; /* Ajusta la distancia desde la parte superior */
+  border-radius: 10px; /* Agrega bordes redondeados */
+  padding: 20px; /* Agrega espacio interno */
+}
