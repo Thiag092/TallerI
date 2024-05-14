@@ -297,10 +297,8 @@ margin-right: 30px;
   
 }
 
-.custom-card {
-  width: 400px; /* Define el ancho deseado */
-  margin: 0 auto; /* Centra horizontalmente */
-  margin-top: 50px; /* Ajusta la distancia desde la parte superior */
-  border-radius: 10px; /* Agrega bordes redondeados */
-  padding: 20px; /* Agrega espacio interno */
+.custom-logo {
+  max-width: 100% !important;
+  width: 100px !important; /* Ajusta este valor según tus necesidades */
+  height: auto !important; /* Mantiene la proporción de la imagen */
 }

@@ -1,59 +1,115 @@
+<section class="vh-100">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px; mt-5">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registrate</p>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="card custom-card mt-4">
-                <section class="page-header" data-store="page-title">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <h1 class="text-center h2 h1-md mt-4 mt-5" style="text-decoration: underline">INICIA SESIÓN</h1>
-                            </div>
-                        </div>
+                <form class="mx-1 mx-md-4 needs-validation" novalidate>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example1c">Nombre completo</label>
+                      <input type="text" id="form3Example1c" class="form-control" required />
+                      <div class="invalid-feedback">
+                        Por favor, ingresa tu nombre completo.
+                      </div>
                     </div>
-                </section>
+                  </div>
 
-                <div>
-                    <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label" style="font-weight: bold;">Nombre completo:</label>
-                            <input type="nombre" class="form-control" id="inputEmail4">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label" style="font-weight: bold;">Correo:</label>
-                            <input type="correo" class="form-control" id="inputPassword4">
-                        </div>
-                        <div class="col-6">
-                            <label for="inputAddress" class="form-label" style="font-weight: bold;">Domicilio:</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="">
-                        </div>
-                        <div class="col-6">
-                            <label for="inputAddress2" class="form-label" style="font-weight: bold;">Telefono:</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="">
-                        </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example3c">Correo electronico</label>
+                      <input type="email" id="form3Example3c" class="form-control" required />
+                      <div class="invalid-feedback">
+                        Por favor, ingresa un correo electrónico válido. (Ej. tuMail@gmail.com").
+                      </div>
+                    </div>
+                  </div>
 
-                        <div class="col-6">
-                            <label for="inputAddress2" class="form-label" style="font-weight: bold;">Contraseña:</label>
-                            <input type="password" class="form-control" id="inputAddress2" placeholder="">
-                        </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example4c">Contraseña</label>
+                      <input type="password" id="form3Example4c" class="form-control" required />
+                      <div class="invalid-feedback">
+                        Por favor, ingresa una contraseña.
+                      </div>
+                    </div>
+                  </div>
 
-                        <div class="col-6">
-                            <label for="inputAddress2" class="form-label" style="font-weight: bold;">Reingrese contraseña:</label>
-                            <input type="password" class="form-control" id="inputAddress2" placeholder="">
-                        </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example4cd">Vuelve a escribir tu contraseña</label>
+                      <input type="password" id="form3Example4cd" class="form-control" required />
+                      <div class="invalid-feedback">
+                        Las contraseñas no coinciden.
+                      </div>
+                    </div>
+                  </div>
 
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                        </div>
-
-                        <div class="col-12">
-                            <p class="registrate">
-                                ¿No tienes una cuenta?
-                                <a class="nav-registro" rel="noonpener noreforrever" style="cursor: pointer"> Regístrate aquí.</a>
-                            </p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="gridCheck" required>
+    <input class="form-check-input" type="checkbox" id="gridCheck" required>
+    <label class="form-check-label" for="gridCheck" >
+      Acepto los términos y condiciones.
+    </label>
+    <div class="invalid-feedback">
+      (Debes aceptar los términos y condiciones.)
     </div>
+  </div>
+
+              <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-4">
+                      <button type="submit" class="btn btn-primary btn-lg btn-custom">Registrarse</button>
+                    </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  (function() {
+    'use strict';
+
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          var checkbox = form.querySelector('#gridCheck');
+
+          if (form.checkValidity() === false || !checkbox.checked) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!checkbox.checked) {
+              checkbox.classList.add('is-invalid');
+            } else {
+              checkbox.classList.remove('is-invalid');
+            }
+          } else {
+            checkbox.classList.remove('is-invalid');
+          }
+
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>
