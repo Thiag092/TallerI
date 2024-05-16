@@ -42,6 +42,8 @@ $routes->get('/comercializacion', 'Home::comercializacion');
 
 $routes->get('/login', 'Home::login');
 
+$routes->get('/registro', 'Home::registro');
+
 
 /*
  * --------------------------------------------------------------------
