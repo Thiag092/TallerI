@@ -14,8 +14,8 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example1c">Nombre</label>
-                      <input type="text" id="form3Example1c" class="form-control" required />
+                      <label class="form-label" for="nombre">Nombre</label>
+                      <input type="text" id="apellido" class="form-control" required />
                       <div class="invalid-feedback">
                         Por favor, ingresa tu nombre.
                       </div>
@@ -26,8 +26,8 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example1c">Apellido</label>
-                      <input type="text" id="form3Example1c" class="form-control" required />
+                      <label class="form-label" for="apellido">Apellido</label>
+                      <input type="text" id="apellido" class="form-control" required />
                       <div class="invalid-feedback">
                         Por favor, ingresa tu nombre apellido.
                       </div>
@@ -38,8 +38,8 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example3c">Correo electronico</label>
-                      <input type="email" id="form3Example3c" class="form-control" required />
+                      <label class="form-label" for="mail">Correo electronico</label>
+                      <input type="email" id="mail" class="form-control" required />
                       <div class="invalid-feedback">
                         Por favor, ingresa un correo electrónico válido. (Ej. tuMail@gmail.com").
                       </div>
@@ -49,8 +49,8 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example4c">Contraseña</label>
-                      <input type="password" id="form3Example4c" class="form-control" required />
+                      <label class="form-label" for="contraseña">Contraseña</label>
+                      <input type="password" id="contraseña" class="form-control" required />
                       <div class="invalid-feedback">
                         Por favor, ingresa una contraseña.
                       </div>
@@ -60,8 +60,8 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example4cd">Vuelve a escribir tu contraseña</label>
-                      <input type="password" id="form3Example4cd" class="form-control" required />
+                      <label class="form-label" for="contraseña2">Vuelve a escribir tu contraseña</label>
+                      <input type="password" id="contraseña2" class="form-control" required />
                       <div class="invalid-feedback">
                         Las contraseñas no coinciden.
                       </div>
@@ -107,6 +107,18 @@
         form.addEventListener('submit', function(event) {
           var checkbox = form.querySelector('#gridCheck');
 
+          if (form.checkValidity() === false || !checkbox.checked) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!checkbox.checked) {
+              checkbox.classList.add('is-invalid');
+            } else {
+              checkbox.classList.remove('is-invalid');
+            }
+          } else {
+            checkbox.classList.remove('is-invalid');
+          }
 
           form.classList.add('was-validated');
         }, false);
