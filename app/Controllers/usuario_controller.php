@@ -23,7 +23,7 @@ class usuario_controller extends Controller{
         $input = $this->validate([
             'nombre'   => 'required|min_length[3]|max_length[50]',
             'apellido' => 'required|min_length[3]|max_length[50]',
-            'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]', //campo unico en la tabla 'usuario' campo 'email'
+            'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuario.email]', //campo unico en la tabla 'usuario' campo 'email'
             'pass'     => 'required|min_length[8]|max_length[20]'
         ],);
 
@@ -70,7 +70,7 @@ class usuario_controller extends Controller{
     
         // Verificar si se encontró el perfil "Cliente"
         if ($perfilCliente) {
-            return $perfilCliente->id_perfil;
+            return $perfilCliente->id_perfiles;
         } else {
             // Si no se encuentra el perfil devolvemos null
             return null;

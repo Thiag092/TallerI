@@ -28,7 +28,7 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <label for="nombre" class="form-label"><i class="fa-solid fa-user"></i> Nombre</label>
-                      <input name="nombre" type="text" class="form-control" value="<?php echo set_value('nombre')?>" id="nombre" placeholder="ej: Paula" required>
+                      <input name="nombre" type="text" class="form-control" value="<?php echo set_value('nombre')?>" id="nombre" placeholder="ej: Juan" required>
                       <div class="invalid-feedback">
                         Por favor, ingrese su nombre.
                       </div>
@@ -41,7 +41,7 @@
 
                     <div class="col-md-6 mb-4">
                       <label for="apellido" class="form-label"><i class="fa-solid fa-user"></i> Apellido</label>
-                      <input name="apellido" type="text" class="form-control" value="<?php echo set_value('apellido')?>" id="apellido" placeholder="ej: Rodriguez" required>
+                      <input name="apellido" type="text" class="form-control" value="<?php echo set_value('apellido')?>" id="apellido" placeholder="ej: Gomez" required>
                       <div class="invalid-feedback">
                         Por favor, ingrese su apellido.
                       </div>
@@ -55,7 +55,7 @@
 
                   <div class="mb-4">
                     <label for="email" class="form-label"><i class="fa-solid fa-envelope"></i> E-mail</label>
-                    <input name="email" type="email" class="form-control" value="<?php echo set_value('email')?>" id="email" placeholder="ej: paula@ejemplo.com" required>
+                    <input name="email" type="email" class="form-control" value="<?php echo set_value('email')?>" id="email" placeholder="tuMail@ejemplo.com" required>
                     <div class="invalid-feedback">
                       Por favor, ingrese un correo electrónico válido.
                     </div>
