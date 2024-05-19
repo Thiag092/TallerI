@@ -25,26 +25,26 @@
 
               <li>
               <a href="https://twitter.com/?lang=es" target="_blank">
-                 <img class="iconosRedes" src="assets/img/icono_twitter.png" alt="" ></a></li>
+              <img class="iconosRedes" src="<?= base_url('assets/img/icono_twitter.png') ?>" alt="">
 
             <li>     
               <a href="https://instagram.com/?lang=es" target="_blank"> 
             
-              <img class="iconosRedes"  src="assets/img/icono_ig.png" alt=""></a></li>
+              <img class="iconosRedes" src="<?= base_url('assets/img/icono_ig.png') ?>" alt="">
 
             <li>
             <a href="https://youtube.com/?lang=es" target="_blank"> 
-              <img class="iconosRedes" src="assets/img/icono_youtube.png" alt=""></a></li>
+              <img class="iconosRedes" src="<?= base_url('assets/img/icono_youtube.png') ?>" alt=""></a></li>
 
             <li>
             
             <a href="https://facebook.com/?lang=es" target="_blank"> 
-              <img class="iconosRedes"  src="assets/img/icono_face.png" alt=""></a></li>
+              <img class="iconosRedes"  src="<?= base_url('assets/img/icono_face.png') ?>" alt=""></a></li>
 
 
             <li>
             <a href="https://tiktok.com/?lang=es" target="_blank"> 
-              <img class="iconosRedes"  src="assets/img/icono_tiktok.png" alt=""></a></li>
+              <img class="iconosRedes"  src="<?= base_url('assets/img/icono_tiktok.png') ?>" alt=""></a></li>
         </ul>
 
 
@@ -55,16 +55,16 @@
             <hr clasee="mb-4">
             
             <p style="text-align: center">
-              <img class="iconos" src="assets/img/icono_mapa.png" alt="">
+              <img class="iconos" src="<?= base_url('assets/img/icono_mapa.png') ?>" alt="">
               <a href="https://www.google.com/maps/place/Junin+123,+W3400AVF+Corrientes/data=!4m2!3m1!1s0x94456cb9cc467387:0xfd86378b067f3c7?sa=X&ved=1t:242&ictx=111" class="text-dark" target="_blank" rel="noonpener noreforrever" style="text-decoration: none;">Junin 123, Corrientes -Argentina</a>
             </p>
               
             <p style="text-align: center">
-              <img class="iconos" src="assets/img/icono_telefono.png">
+              <img class="iconos" src="<?= base_url('assets/img/icono_telefono.png') ?>">
               <a class="text-dark" target="_blank" rel="noonpener noreforrever" style="text-decoration: none;">TEL: 379-4123456</a>
             </p>
             <p style="text-align: center">
-              <img class="iconos" src="assets/img/icono_correo_negro.png">
+              <img class="iconos" src="<?= base_url('assets/img/icono_correo_negro.png') ?>">
               <a href="https://www.gmail.com" class="text-dark" target="_blank" rel="noonpener noreforrever" style="text-decoration: none;">GalaxyGuitars@gmail.com</a>
             </p>
 
@@ -82,6 +82,8 @@
 
       
 
-    <script src="assets/js/bootstrap.bundle.min.js" integrity="" crossorigin=""></script>
+    <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>" integrity="" crossorigin=""></script>
+
+
 </body>
 </html>

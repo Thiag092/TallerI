@@ -6,11 +6,11 @@
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
 
+    <link href="<?= base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet" integrity=" " crossorigin="">
 
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity=" " crossorigin="">
 
     <meta name="viewport" content="width=device-width, initialscale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/css/miestilo.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/miestilo.css') ?>">
     <title>Galaxy - Guitarras de otro mundo</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="<?php echo base_url('principal'); ?>">
 
-            <img class="icono" src="assets/img/logo_alien.png" alt="probando logo" >
+            <img class="icono" src="<?= base_url('assets/img/logo_alien.png') ?>"  alt="probando logo') ?>" >
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:  white;">
             <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,7 @@
               
               
             </ul>
-            <img class="Marca" src="assets/img/slogan.png" alt="">
+            <img class="Marca" src="<?= base_url('assets/img/slogan.png'); ?>" alt="">
 
           </div>
         </div>

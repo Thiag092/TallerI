@@ -40,9 +40,7 @@ $routes->get('/contacto', 'Home::contacto');
 
 $routes->get('/comercializacion', 'Home::comercializacion');
 
-$routes->get('/login', 'Home::login');
 
-$routes->get('/registro', 'Home::registro');
 
 
 /*
@@ -53,28 +51,16 @@ $routes->get('/registro', 'Home::registro');
  * 
  * 
  * 
- * /**
+ /**
  * Rutas del Registro de Usuarios
  */
 $routes->get('registro', 'usuario_controller::create');
 $routes->post('procesar-registro', 'usuario_controller::formValidation'); 
- /* 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+
+/**
+ * Rutas del Login de Usuarios
  */
- /* There will often be times that you need additional routing and you
- * need it to be able to override any defaults in this file. Environment
- * based routes is one such time. require() additional route files here
- * to make that happen.
- *
- * You will have access to the $routes object within that file without
- * needing to reload it.
- */
-if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
-    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
-}
+$routes->get('login', 'Login_controller::login'); //Muestra el formulario de inicio de sesión.
+$routes->post('procesar-inicio', 'Login_controller::auth'); //Procesa los datos de inicio de sesión enviados - Verifica las credenciales del usuario - Inicia la sesión si las credenciales son correctas.
+$routes->get('cerrar-inicio', 'Login_controller::logout', ['filter' => 'auth']); //Cierra la sesión del usuario autenticado y redirige a la pagina principal
+
