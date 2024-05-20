@@ -40,6 +40,7 @@ $routes->get('/contacto', 'Home::contacto');
 
 $routes->get('/comercializacion', 'Home::comercializacion');
 
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
@@ -53,4 +54,13 @@ $routes->get('/comercializacion', 'Home::comercializacion');
  */
 $routes->get('registro', 'usuario_controller::create');
 $routes->post('procesar-registro', 'usuario_controller::formValidation'); 
+
+
+/**
+ * rutas para el login
+ */
+
+$routes->get('login', 'login_controller::login'); //Muestra el formulario de inicio de sesión.
+$routes->post('procesar-inicio', 'Login_controller::auth'); //Procesa los datos de inicio de sesión enviados - Verifica las credenciales del usuario - Inicia la sesión si las credenciales son correctas.
+$routes->get('cerrar-inicio', 'Login_controller::logout', ['filter' => 'auth']); //Cierra la sesión del usuario autenticado y redirige a la pagina principal
 

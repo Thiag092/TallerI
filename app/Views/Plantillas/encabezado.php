@@ -48,7 +48,13 @@
               <li class="nav-item">
                 <a class="nav-link" rel="noonpener noreforrever" href="<?php echo base_url('registro'); ?>">Ingreso</a>
               </li>
-              
+
+
+              <!---- prueba de ruta login --------------------------------------------------------------------
+              <li class="nav-item">
+                <a class="nav-link" rel="noonpener noreforrever" href="<?php echo base_url('login'); ?>">IngresoPruebaLogin</a>
+              </li>
+              -------------------------------------------------------------------------------------------------------->
               
             </ul>
             <img class="Marca" src="<?= base_url('assets/img/slogan.png'); ?>" alt="">

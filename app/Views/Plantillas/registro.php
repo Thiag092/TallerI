@@ -103,6 +103,10 @@
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-4">
                     <button type="submit" class="btn btn-primary btn-lg btn-custom">Registrarse</button>
                   </div>
+
+                  <div class="RedireccionRegistro text-center">
+                    <p> Ya tenes una cuenta? <a href="<?= base_url('login') ?>" class="registro-link">Inica sesión acá.</a></p>
+                  </div>
                 </form>
 
               </div>
