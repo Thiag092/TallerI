@@ -46,7 +46,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" rel="noonpener noreforrever" href="<?php echo base_url('registro'); ?>">Ingreso</a>
+                <a class="nav-link" rel="noonpener noreforrever" href="<?php echo base_url('login'); ?>">Ingreso</a>
               </li>
 
 
