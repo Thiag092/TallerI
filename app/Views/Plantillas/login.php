@@ -1,3 +1,33 @@
+<div>
+  <!--recuperamos datos con la función Flashdata para mostrarlos si el login NO FUE EXITOSO por tener contraseña incorrecta-->
+  <?php if (session()->getFlashdata('passIncorrecto')): ?>
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+      <?= session()->getFlashdata('passIncorrecto') ?>
+  </div>
+  <?php endif; ?>
+</div>
+
+<div>
+  <!--recuperamos datos con la función Flashdata para mostrarlos si el login NO FUE EXITOSO, por no estar el mail registrado-->
+  <?php if (session()->getFlashdata('mailIncorrecto')): ?>
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+      <?= session()->getFlashdata('mailIncorrecto') ?>
+  </div>
+  <?php endif; ?>
+</div>
+
+<div>
+  <!--recuperamos datos con la función Flashdata para mostrarlos si el login es exitoso-->
+  <?php if (session()->getFlashdata('success')): ?>
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+      <?= session()->getFlashdata('success') ?>
+  </div>
+  <?php endif; ?>
+</div>
+
 <section class="vh-100">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">

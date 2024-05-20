@@ -62,8 +62,8 @@ class usuario_controller extends Controller{
              
             // Flashdata almacena datos en la sesión que solo persisten durante la siguiente solicitud
             // Establecer un mensaje de éxito utilizando Flashdata
-               session()->setFlashdata('success', 'Usuario registrado con exito!');
-                return redirect()->to('/registro'); //Redirige al usuario a la página de registro
+               session()->setFlashdata('success', 'Usuario registrado con exito! Ahora por favor, inicia sesión.-');
+                return redirect()->to('/login'); //Redirige al usuario a la página de registro
 
               // return $this->response->redirect('/registro');
       

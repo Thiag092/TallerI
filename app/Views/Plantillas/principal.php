@@ -1,4 +1,12 @@
-
+<div>
+  <!--recuperamos datos con la función Flashdata para mostrarlos si el login fue exitoso-->
+  <?php if (session()->getFlashdata('loginExitoso')): ?>
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+      <?= session()->getFlashdata('loginExitoso') ?>
+  </div>
+  <?php endif; ?>
+</div>
 
 
       <div class="container-fluid">
