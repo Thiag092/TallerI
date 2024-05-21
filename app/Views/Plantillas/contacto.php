@@ -14,23 +14,23 @@
       <div class="col-s-12 col-md-12 col-lg-6 col-xl-4">
         <ul class="contact-info">
           <li class="contact-item">
-            <img class="iconos" src="assets/img/icono_reloj.png" alt="">
+            <img class="iconos" src="<?= base_url('assets/img/icono_reloj.png') ?>" alt="">
             <p>Horario de atencion: Lun a Vie. 8.30hs a 12.30hs y 17hs a 20hs. - Sab 8.30hs a 12.30hs.</p>
           </li>
           <li class="contact-item">
-            <img class="iconos" src="assets/img/icono_mapa.png" alt="">
+            <img class="iconos" src="<?= base_url('assets/img/icono_mapa.png') ?>" alt="">
             <p>Domicilio legal: Junin 123, Corrientes - Argentina</p>
           </li>
           <li class="contact-item">
-            <img class="iconos" src="assets/img/icono_telefono_negro.png">
+            <img class="iconos" src="<?= base_url('assets/img/icono_telefono_negro.png') ?>">
             <p>TEL: 379-4123456</p>
           </li>
           <li class="contact-item">
-            <img class="iconos" src="assets/img/icono_correo_negro.png">
+            <img class="iconos" src="<?= base_url('assets/img/icono_correo_negro.png') ?>">
             <p>GalaxyGuitars@gmail.com</p>
           </li>
           <li class="contact-item">
-            <img class="iconos" src="assets/img/icono_empresa.png">
+            <img class="iconos" src="<?= base_url('assets/img/icono_empresa.png') ?>">
             <p>Razon Social: GalaxyGuitars S.A.</p>
           </li>
         </ul>

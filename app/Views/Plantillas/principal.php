@@ -18,14 +18,14 @@
               <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="img-fluid" src="assets/img/localorig.png" class="d-block w-100" alt="...">
+                    <img class="img-fluid" src="<?= base_url('assets/img/localorig.png') ?>" class="d-block w-100" alt="...">
                   </div>
                   
                   <div class="carousel-item">
-                    <img class="img-fluid" src="assets/img/DUEÑO2.jpg" class="d-block w-100" alt="...">
+                    <img class="img-fluid" src="<?= base_url('assets/img/DUEÑO2.jpg') ?>" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img class="img-fluid" src="assets/img/local222.png" class="d-block w-100" alt="...">
+                    <img class="img-fluid" src="<?= base_url('assets/img/local222.png') ?>" class="d-block w-100" alt="...">
                   </div>
                   
                 </div>
@@ -86,7 +86,7 @@
                     <div class="row row-cols-1 row-cols-md-2 g-4">
               <div class="col-xs-12 col-s-12 col-md-6 col-lg-3 col-xl-3">
               <div class="card guitarra h-100">
-                <img src="assets/img/categoria1.jpg" class="card-img-top" alt="Imagen 1">
+                <img src="<?= base_url('assets/img/categoria1.jpg') ?>" class="card-img-top" alt="Imagen 1">
                 <div class="card-body">
                     <h5 class="card-title">Firebird Rose</h5>
                     <p class="card-text">Experimenta el poder del rock con nuestra guitarra eléctrica Firebird en un vibrante color rosa. 
@@ -98,7 +98,7 @@
 
           <div class="col-xs-12 col-s-12 col-md-6 col-lg-3 col-xl-3">
               <div class="card guitarra h-100">
-                <img src="assets/img/categoria2.jpg" class="card-img-top" alt="Imagen 2">
+                <img src="<?= base_url('assets/img/categoria2.jpg') ?>" class="card-img-top" alt="Imagen 2">
                   <div class="card-body">
                       <h5 class="card-title">Stratocaster S-special</h5>
                       <p class="card-text">La clásica y versátil Stratocaster es la compañera perfecta para cualquier guitarrista. Con su cuerpo contorneado,
@@ -109,7 +109,7 @@
 
             <div class="col-xs-12 col-s-12 col-md-6 col-lg-3 col-xl-3">
               <div class="card guitarra h-100">
-                <img src="assets/img/categoria3.jpg" class="card-img-top" alt="Imagen 3">
+                <img src="<?= base_url('assets/img/categoria3.jpg') ?>" class="card-img-top" alt="Imagen 3">
                   </svg>
                   <div class="card-body">
                       <h5 class="card-title">X-plorer Tiger</h5>
@@ -122,7 +122,7 @@
 
             <div class="col-xs-12 col-s-12 col-md-6 col-lg-3 col-xl-3">
               <div class="card guitarra h-100">
-                <img src="assets/img/categoria4.jpg" class="card-img-top" alt="Imagen 4">
+                <img src="<?= base_url('assets/img/categoria4.jpg') ?>" class="card-img-top" alt="Imagen 4">
                   <div class="card-body">
                       <h5 class="card-title">Stratocaster Doble</h5>
                       <p class="card-text">¡Duplica tu creatividad con nuestra Stratocaster de doble mástil! Esta guitarra única te ofrece la versatilidad de 
@@ -166,7 +166,7 @@
     
           <div class="col-xs-12 col-s-12 col-md-12 col-lg-6 col-xl-6">
             <div class="card luthierImagen1">
-              <img class="luthierFoto" src="assets/img/luthier1.jpg" alt="Imagen 1">
+              <img class="luthierFoto" src="<?= base_url('assets/img/luthier1.jpg') ?>" alt="Imagen 1">
             </div>
           </div>
         </div>
@@ -198,7 +198,7 @@
     
           <div class="col-xs-12 col-s-12 col-md-12 col-lg-6 col-xl-6">
             <div class="card luthierImagen1">
-              <img class="luthierFoto" src="assets/img/luthier2.jpg" alt="Imagen 1">
+              <img class="luthierFoto" src="<?= base_url('assets/img/luthier2.jpg') ?>" alt="Imagen 1">
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@
     
           <div class="col-xs-12 col-s-12 col-md-12 col-lg-6 col-xl-6">
             <div class="card luthierImagen1">
-              <img class="luthierFoto" src="assets/img/luthier3.jpg" alt="Imagen 1">
+              <img class="luthierFoto" src="<?= base_url('assets/img/luthier3.jpg') ?>" alt="Imagen 1">
             </div>
           </div>
         </div>

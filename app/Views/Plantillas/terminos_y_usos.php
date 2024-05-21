@@ -48,7 +48,7 @@
       </div>
 
    
-      <img class="luthier-terminos" src="assets/img/luthier_terminos.jpg" alt="">
+      <img class="luthier-terminos" src="<?= base_url('assets/img/luthier_terminos.jpg') ?>" alt="">
       </div>
       
     </div>

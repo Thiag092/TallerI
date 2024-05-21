@@ -1,16 +1,16 @@
 <div class="container">
 <div class="card ">
 
-<img src="assets/img/metodo_pago.png" alt=""></div>
+<img src="<?= base_url('assets/img/metodo_pago.png') ?>" alt=""></div>
 
 <div class="card mt-2">
 
 <div class="card-body">
           <h1 class="h3 card-title align-left">TARJETAS DE CREDITO</h1>
-          <img src="assets/img/icono_master.png">
-          <img src="assets/img/icono_maestro.png">
-          <img src="assets/img/icono_visa.png">
-          <img src="assets/img/icono_amex.png">
+          <img src="<?= base_url('assets/img/icono_master.png') ?>">
+          <img src="<?= base_url('assets/img/icono_maestro.png') ?>">
+          <img src="<?= base_url('assets/img/icono_visa.png') ?>">
+          <img src="<?= base_url('assets/img/icono_amex.png') ?>">
 
 <ul>
     <li>
@@ -28,10 +28,10 @@
 
 
 <h1 class="h3 card-title align-left">TARJETAS DE DEBITO</h1>
-<img src="assets/img/icono_master.png">
-          <img src="assets/img/icono_maestro.png">
-          <img src="assets/img/icono_visa.png">
-          <img src="assets/img/icono_amex.png">
+<img src="<?= base_url('assets/img/icono_master.png') ?>">
+          <img src="<?= base_url('assets/img/icono_maestro.png') ?>">
+          <img src="<?= base_url('assets/img/icono_visa.png') ?>">
+          <img src="<?= base_url('assets/img/icono_amex.png') ?>">
 <ul>
     <li>
        Visa Debito</li>
@@ -45,7 +45,7 @@
 
 
 <h1 class="h3 card-title align-left">MERCADO PAGO</h1>
-<img src="assets/img/icono_mp.png">
+<img src="<?= base_url('assets/img/icono_mp.png') ?>">
 <ul>
     <li>Podés abonar con tarjetas de crédito, débito, efectivo o Mercado Crédito. Las cuotas y promociones vigentes están establecidas por
      Mercado Pago. Todas estas transacciones corren bajo la plataforma Mercado Pago de la empresa Mercado Libre. Si tenés dudas al
@@ -57,7 +57,7 @@
       <hr class="linea">
 
 <h1 class="h3 card-title align-left">MODO</h1>
-<img src="assets/img/icono_modoo.png">
+<img src="<?= base_url('assets/img/icono_modoo.png') ?>">
 <ul>
     <li>
     Pagá con tu APP de MODO o desde tu Homebanking, escaneá el QR y aboná con la forma de pago que prefieras. Podes acceder a
@@ -78,11 +78,11 @@
 <div class="card m-2">
     <div class="card-body">
 <h1 class="tiuloEnvio">MÉTODOS DE ENVÍO Y RETIRO<h1>
-<img src="assets/img/icono_envio.png">
+<img src="<?= base_url('assets/img/icono_envio.png') ?>">
 
 
 <h1 class="h3 card-title align-left">ENVIO A DOMICILIO EXPRESS</h1>
-<img src="assets/img/icono_andreani.jpg">
+<img src="<?= base_url('assets/img/icono_andreani.jpg') ?>">
 <ul>
 
 <li>Tipo de envío únicamente para CABA y GBA. Entrega hasta en 48hs hábiles. En caso de no poder realizar la entrega en la primera 
@@ -93,8 +93,8 @@
 
 
 <h1 class="h3 card-title align-left">ENVIO A DOMICILIO ESTANDAR</h1>
-<img src="assets/img/icono_oca.png">
-<img src="assets/img/icono_correo.png">
+<img src="<?= base_url('assets/img/icono_oca.png') ?>">
+<img src="<?= base_url('assets/img/icono_correo.png') ?>">
 <ul>
 <li>En compras mayores o iguales a $69.999 el envío es GRATIS. El plazo de entrega es entre 2 y 4 días hábiles en CABA y GBA y 
     hasta 10 días hábiles para el resto del país (excepto Tierra del Fuego), dependiendo la localidad donde elijas recibir tu pedido.
@@ -107,7 +107,7 @@ postal en la página del producto.</li>
 
 
 <h1 class="h3 card-title align-left">RETIRO EN LA SUCURSAL DE LOGISTICA</h1>
-<img src="assets/img/icono_paquete.png">
+<img src="<?= base_url('assets/img/icono_paquete.png') ?>">
 <ul>
 <li>Ingresá a la página de producto y colocá el código postal para conocer las sucursales de las empresas logísticas cercanas a tu 
     domicilio, costos y tiempos de entrega.</ul>
@@ -116,7 +116,7 @@ postal en la página del producto.</li>
 
 <h1 class="h3 card-title align-left">RETIRO EN SUCURSAL:</h1>
 <ul>
-<li><img src="assets/img/icono_gratis.png"></li>
+<li><img src="<?= base_url('assets/img/icono_gratis.png') ?>"></li>
 </ul>
 <hr class="linea">
 
