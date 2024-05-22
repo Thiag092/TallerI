@@ -42,7 +42,9 @@ public function authenticate() {
             $ses_data = [
                 'id'       => $data['id'],
                 'nombre'     => $data['nombre'],
+                'apellido' => $data['apellido'],
                 'email'    => $data['email'],
+                'perfil_id' => $data['perfil_id'],
                 'logged_in' => TRUE
             ];
             $session->set($ses_data);
