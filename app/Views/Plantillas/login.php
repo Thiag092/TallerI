@@ -18,6 +18,20 @@
   <?php endif; ?>
 </div>
 
+
+<div>
+  <!--recuperamos datos con la función Flashdata para mostrarlos una vez que el usuario FINALIZO LA SESION-->
+  <?php if (session()->getFlashdata('vuelvaIniciar')): ?>
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+      <?= session()->getFlashdata('vuelvaIniciar') ?>
+  </div>
+  <?php endif; ?>
+</div>
+
+
+
+
 <div>
   <!--recuperamos datos con la función Flashdata para mostrarlos si el login es exitoso-->
   <?php if (session()->getFlashdata('success')): ?>

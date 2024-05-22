@@ -63,7 +63,9 @@ public function authenticate() {
 
 public function logout() {
     $session = session();
+    $session->setFlashdata('vuelvaIniciar', 'Sesion finalizada, para volver a operar inicie sesion');
     $session->destroy();
-    return redirect()->to('/login');
+    return redirect()->to('/principal');
 }
+
 }

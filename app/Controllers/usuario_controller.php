@@ -27,7 +27,7 @@ class usuario_controller extends Controller{
             'nombre'   => 'required|min_length[3]|max_length[50]',
             'apellido' => 'required|min_length[3]|max_length[50]',
             'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuario.email]', //campo unico en la tabla 'usuario' campo 'email'
-            'pass'     => 'required|min_length[8]|max_length[20]'
+            'pass'     => 'required|min_length[5]|max_length[20]'
         ],);
         //si al final de las validaciones, todos cumplen con las establecidas, validae retorna "true", y asigna dicho valor a "$input"
         //caso contrario, retorna "false", dando dicho valor a "$input"
