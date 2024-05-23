@@ -74,48 +74,48 @@ $perfil = $session->get('perfil_id');
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
                 </li>
-                <li class="nav-item p-2 m-3">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('catalogo'); ?>">
-                        <h5>Nuestro catalogo</h5>
+                        Nuestro catálogo
                     </a>
                 </li>
-                <li class="nav-item p-2 m-3">
-                    <a class="btn btn-danger" href="<?php echo base_url('cerrar-login'); ?>">
-                        <h5>Cerrar sesión</h5>
+                <li class="nav-item">
+                    <a class="btn btn-danger" href="<?php echo base_url('cerrar-inicio'); ?>">
+                        Cerrar sesión
                     </a>
                 </li>
             <?php endif; ?>
 
             <!-- Navbar para administradores -->
             <?php if ($perfil == "1") : ?>
-                <li class="nav-item p-2 m-3">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('crud_usuarios'); ?>">
-                        <h5>CRUD Usuarios</h5>
+                        CRUD Usuarios
                     </a>
                 </li>
-                <li class="nav-item p-2 m-3">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/crud'); ?>">
-                        <h5>CRUD Productos</h5>
+                        CRUD Productos
                     </a>
                 </li>
-                <li class="nav-item p-2 m-3">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/crud_categorias'); ?>">
-                        <h5>CRUD Categorías</h5>
+                        CRUD Categorías
                     </a>
                 </li>
-                <li class="nav-item p-2 m-3">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/consultas_view'); ?>">
-                        <h5>Responder consultas</h5>
+                        Responder consultas
                     </a>
                 </li>
-                <li class="nav-item p-2 m-3">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/listar_ventas'); ?>">
-                        <h5>Mostrar Ventas</h5>
+                        Mostrar Ventas
                     </a>
                 </li>
-                <li class="nav-item p-2 m-3">
+                <li class="nav-item">
                     <a class="btn btn-danger" href="<?php echo base_url('cerrar-inicio'); ?>">
-                        <h5>Cerrar sesión</h5>
+                        Cerrar sesión
                     </a>
                 </li>
             <?php endif; ?>
