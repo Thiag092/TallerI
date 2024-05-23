@@ -53,6 +53,9 @@ $perfil = $session->get('perfil_id');
                     <a class="nav-link" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('catalogo'); ?>">Nuestro catálogo</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('login'); ?>">Ingreso</a>
                 </li>
             <?php endif; ?>
