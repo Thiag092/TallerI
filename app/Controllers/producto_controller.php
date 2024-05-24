@@ -64,7 +64,10 @@ class producto_controller extends Controller {
             ];
 
             $productoModel->insert($data);
-            return redirect()->to('/crud')->with('success', 'Producto creado correctamente');
+           // return redirect()->to('/produ-form')->with('success', 'Producto creado correctamente');
+           session()->setFlashdata('success', 'Producto registrado con exito!');
+           return redirect()->to('/produ-form');
+
         } else {
             $categoriaModel = new categoria_model();
             $data['categorias'] = $categoriaModel->orderBy('id', 'DESC')->findAll();
