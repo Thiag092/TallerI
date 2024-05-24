@@ -104,7 +104,7 @@
         <!-- Otros campos del formulario -->
         
         <div class="col-sm-6">
-            <label for="imagen" class="form-label">Imagen</label>
+            <label for="imagen" class="form-label">Carga de imagen:</label>
             <input type="file" name="imagen" class="form-control" required>
             <!-- Error -->
             <?php if ($validation->getError('imagen')): ?>
