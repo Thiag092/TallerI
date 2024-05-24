@@ -9,6 +9,7 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\AuthFilter; // Importa correctamente el filtro AuthFilter
+use App\Filters\Admin;
 
 class Filters extends BaseConfig
 {
@@ -19,6 +20,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'auth'          => AuthFilter::class, // Usa AuthFilter::class
+        'admin'          => Admin::class,
     ];
 
     public array $globals = [

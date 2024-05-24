@@ -1,0 +1,49 @@
+CRITICAL - 2024-05-24 00:02:50 --> Class 'Config\Admin' not found
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('crud', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-24 00:04:27 --> mysqli_sql_exception: Unknown column 'id_categoria' in 'order clause' in C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyecto_ayala_yago\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto_ayala_yago\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto_ayala_yago\app\Controllers\producto_controller.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(934): App\Controllers\producto_controller->index()
+#8 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+#9 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyecto_ayala_yago\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-24 00:04:27 --> Unknown column 'id_categoria' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`
+ORDER BY `id_categoria` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\producto_controller.php(26): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\producto_controller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-24 00:05:25 --> Invalid file: "front\head_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front\\head_view.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('front\\head_view', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(29): view('front\\head_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\producto_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-24 00:07:51 --> Invalid file: "back\productos\crud_productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back\\productos\\crud_productos.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back\\productos\\crud_productos', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(30): view('back\\productos\\crud_productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\producto_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

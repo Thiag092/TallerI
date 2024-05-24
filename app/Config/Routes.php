@@ -64,3 +64,20 @@ $routes->get('login', 'login_controller::login'); //Muestra el formulario de ini
 $routes->post('login', 'login_controller::authenticate'); //Procesa los datos de inicio de sesión enviados - Verifica las credenciales del usuario - Inicia la sesión si las credenciales son correctas.
 $routes->get('cerrar-inicio', 'login_controller::logout', ['filter' => 'auth']); //Cierra la sesión del usuario autenticado y redirige a la pagina principal
 
+/**
+ * rutas para CRUD de productos
+ */
+
+ $routes->get('/crud', 'producto_controller::index', ['filter' => 'admin']);
+ $routes->get('/produ-form', 'producto_controller::crearproducto', ['filter' => 'admin']);
+ $routes->post('/enviar-prod', 'producto_controller::alta_producto', ['filter' => 'admin']);
+
+$routes->get('/vista_editar/(:num)', 'producto_controller::vistaEditarProducto/$1', ['filter' => 'admin']);
+
+$routes->post('/editar/(:num)', 'producto_controller::editarProducto/$1', ['filter' => 'admin']);
+
+$routes->get('/produ-eliminados', 'producto_controller::vista_productos_eliminados', ['filter' => 'admin']);
+
+$routes->get('/produ-eliminar/(:num)', 'producto_controller::eliminarProducto/$1', ['filter' => 'admin']);
+
+$routes->get('/produ-restaurar/(:num)', 'producto_controller::restaurarProducto/$1', ['filter' => 'admin']);
