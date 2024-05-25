@@ -74,6 +74,7 @@ class consulta_controller extends Controller
             'respondido' => 'SI'
         ];
         $v_consulta_model->update($id, $data);
+        session()->setFlashdata('success', 'Mensaje respondido!');
 
         return $this->response->redirect(site_url('/consultas_view'));
     }
@@ -85,6 +86,7 @@ class consulta_controller extends Controller
             'respondido' => 'NO'
         ];
         $v_consulta_model->update($id, $data);
+        session()->setFlashdata('success', 'Mensaje respondido!');
 
         return $this->response->redirect(site_url('/consultas_view'));
     }
