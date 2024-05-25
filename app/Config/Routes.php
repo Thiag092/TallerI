@@ -96,3 +96,30 @@ $routes->post('/editar_usuario/(:num)', 'usuario_controller::editarUsuario/$1', 
 $routes->get('/eliminar_usuario/(:num)', 'usuario_controller::eliminarUsuario/$1', ['filter' => 'admin']);
 
 $routes->get('/restaurar_usuario/(:num)', 'usuario_controller::restaurarUsuario/$1', ['filter' => 'admin']);
+
+
+
+
+
+/**
+ * Rutas de la seccion "RESPONDER CONSULTAS" de la barra de nav----------------------------------------------------------
+ */
+//la carga se encarga $routes->get('contacto', 'Home::f_contacto');
+
+$routes->get('consultas_view', 'consulta_controller::ver_consultas', ['filter' => 'admin']);
+$routes->get('ver_consultas_respondidas', 'consulta_controller::ver_consultas_respondidas', ['filter' => 'admin']);
+
+$routes->post('enviar_consulta', 'consulta_controller::formValidation');//No admin ni logueado
+
+$routes->get('/responder_consulta/(:num)', 'consulta_controller::responderConsulta/$1', ['filter' => 'admin']);
+
+$routes->get('/restaurar_consulta/(:num)', 'consulta_controller::restaurarConsulta/$1', ['filter' => 'admin']);
+
+
+
+
+/**Admin
+ * Rutas de "MOSTRAR VENTAS"" --------------------------------------------------------------------------------------
+ */
+$routes->get('listar_ventas', 'Ventas_controller::ver_ventas', ['filter' => 'admin']);
+$routes->get('/ver_venta_detalle/(:num)', 'Ventas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);
