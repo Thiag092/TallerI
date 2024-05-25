@@ -1,5 +1,11 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="p-4">
+        <?php if (session()->getFlashdata('success')) { ?>
+            <div class="mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <?= session()->getFlashdata('success') ?>
+            </div>
+        <?php } ?>
         <h2 class="text-center">CRUD de productos</h2>
         <div class="text-center p-2">
             <button class="w-25 btn btn-primary btn-sm" onclick="location.href='<?= base_url('produ-form'); ?>'">Agregar nuevo producto</button>
@@ -13,7 +19,6 @@
                     <div class="card h-100">
                         <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" class="card-img-top img-fluid" style="height: 300px; object-fit: cover;">
                         <div class="card-body">
-                            <!-- Aplicamos estilos CSS para el texto -->
                             <p class="card-text text-center" style="font-size: 20px; font-weight: bold;"><?= $producto['nombre_prod'] ?></p>
                             <p class="card-title">Precio: $<?= $producto['precio'] ?></p>
                             <p class="card-title">Precio de venta: $<?= $producto['precio_vta'] ?></p>

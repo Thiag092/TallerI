@@ -1,0 +1,16 @@
+CRITICAL - 2024-05-25 00:07:22 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Controllers\producto_controller.php on line 265.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\producto_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\producto_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\producto_controller')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\producto_controller')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\producto_controller', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:20:40 --> Cannot redeclare App\Controllers\producto_controller::vistaEditarProducto()
+in APPPATH\Controllers\producto_controller.php on line 270.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-25 00:23:01 --> Cannot redeclare App\Controllers\producto_controller::vistaEditarProducto()
+in APPPATH\Controllers\producto_controller.php on line 270.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

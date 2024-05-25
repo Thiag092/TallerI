@@ -164,7 +164,7 @@ class producto_controller extends Controller {
             ];
         }
         
-        $producto = new Producto_model();
+        $producto = new producto_model();
         //var_dump($rules);
         $this->validate($rules);
        
@@ -177,7 +177,10 @@ class producto_controller extends Controller {
             if (!($this->request->getFile('imagen')->getName() === "")) {      
                 //var_dump($rules);
                 //exit();       
-                
+                //se está verificando si se ha cargado una nueva imagen para el producto. Si se ha cargado una nueva imagen 
+                //(es decir, el nombre del archivo no está vacío), entonces se procede a manejar la actualización de la imagen
+                // en el primer bloque, se actualizan explícitamente todos los campos, mientras que en el segundo bloque, 
+                //se actualizan los campos sin hacer ninguna distinción.
 
                 
                 $img = $this->request->getFile('imagen');
@@ -196,7 +199,7 @@ class producto_controller extends Controller {
                 ];
 
                 $producto->update($id, $data);
-                session()->setFlashdata('success', 'Producto EDITADO con exito!');
+                session()->setFlashdata('success', 'Cambios guardados con ÉXITO!!');
                 return $this->response->redirect(site_url('/crud'));
 
             } else {
@@ -211,7 +214,7 @@ class producto_controller extends Controller {
                 ];
 
                 $producto->update($id, $data);
-                
+                session()->setFlashdata('success', 'Cambios guardados con ÉXITO!!');
                 return $this->response->redirect(site_url('/crud'));
                 
             }
@@ -252,4 +255,38 @@ class producto_controller extends Controller {
     
 
     }
+
+    public function eliminarProducto($id = null) {
+        $producto = new producto_model();
+        $data = [
+                    'eliminado' => "SI"
+                ];
+        $producto->update($id, $data);
+
+        return $this->response->redirect(site_url('/crud'));
+}
+
+public function vista_productos_eliminados() {
+    $productoModel = new producto_model();
+    $data['productos'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
+    //$categoriaModel = new Categoria_model();
+    //$data['categorias'] = $categoriaModel->orderBy('id_categoria', 'DESC')->findAll();
+    $data['titulo'] = 'Productos Eliminados';
+
+    echo view('Plantillas/encabezado', $data);
+    echo view('Plantillas/productos_eliminados', $data);
+    echo view('Plantillas/footer');
+}
+
+public function restaurarProducto($id = null) {
+    $producto = new producto_model();
+    $data = [
+                'eliminado' => "NO"
+            ];
+    $producto->update($id, $data);
+    session()->setFlashdata('success', 'Cambios guardados con ÉXITO!!');
+    return $this->response->redirect(site_url('/crud'));
+}
+
+
 }
