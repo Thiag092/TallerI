@@ -65,7 +65,7 @@ $routes->post('login', 'login_controller::authenticate'); //Procesa los datos de
 $routes->get('cerrar-inicio', 'login_controller::logout', ['filter' => 'auth']); //Cierra la sesión del usuario autenticado y redirige a la pagina principal
 
 /**
- * rutas para CRUD de productos
+ * rutas para CRUD de productos ---------------------------------------------------------------------------------------
  */
 
  $routes->get('/crud', 'producto_controller::index', ['filter' => 'admin']);
@@ -81,3 +81,18 @@ $routes->get('/produ-eliminados', 'producto_controller::vista_productos_eliminad
 $routes->get('/produ-eliminar/(:num)', 'producto_controller::eliminarProducto/$1', ['filter' => 'admin']);
 
 $routes->get('/produ-restaurar/(:num)', 'producto_controller::restaurarProducto/$1', ['filter' => 'admin']);
+
+
+/**
+ * Rutas del crud de usuarios -------------------------------------------------------------------------------------------
+ */
+$routes->get('crud_usuarios', 'usuario_controller::cargar_crud', ['filter' => 'admin']);
+$routes->get('ver_usuarios_eliminados', 'usuario_controller::ver_eliminados', ['filter' => 'admin']);
+
+$routes->get('/ver_editar_usuario/(:num)', 'usuario_controller::ver_editarUsuario/$1', ['filter' => 'admin']);
+
+$routes->post('/editar_usuario/(:num)', 'usuario_controller::editarUsuario/$1', ['filter' => 'admin']);
+
+$routes->get('/eliminar_usuario/(:num)', 'usuario_controller::eliminarUsuario/$1', ['filter' => 'admin']);
+
+$routes->get('/restaurar_usuario/(:num)', 'usuario_controller::restaurarUsuario/$1', ['filter' => 'admin']);

@@ -3,6 +3,9 @@ namespace App\Controllers;
 Use App\Models\usuario_model;
 use CodeIgniter\Controller;
 use Config\Database; 
+Use App\Models\perfiles_model;
+
+
 
 class usuario_controller extends Controller{
 
@@ -69,6 +72,36 @@ class usuario_controller extends Controller{
       
         }
     }
+
+
+//aca entra cuando voy al CRUD USUARIOS en la barra de navegacion-----------------------------------------
+
+    public function cargar_crud($id = null)
+  {
+
+    $data['titulo'] = 'CRUD Usuarios';
+    $v_usuarios_model = new usuario_model();
+    $data['usuarios'] = $v_usuarios_model->findAll();
+
+    $v_perfiles_model = new perfiles_model();
+    $data['perfiles'] = $v_perfiles_model->findAll();
+
+    echo view('Plantillas/encabezado', $data);
+        echo view('Plantillas/crud_users');
+        echo view('Plantillas/footer');
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
     private function getPerfilIdCliente() {
         // Obtener una instancia del servicio Database
