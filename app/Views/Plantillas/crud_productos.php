@@ -15,9 +15,9 @@
         <div class="row p-2">
             <?php foreach($productos as $producto): ?>
                 <?php if($producto['eliminado'] == "NO"): ?>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+                <div class="col-xs-12 col-m-6 col-lg-4 p-2">
                     <div class="card h-100">
-                        <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" class="card-img-top img-fluid" style="height: 300px; object-fit: cover;">
+                        <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" class="card-img-top img-fluid" style="height: 400px; object-fit: cover;">
                         <div class="card-body">
                             <p class="card-text text-center" style="font-size: 20px; font-weight: bold;"><?= $producto['nombre_prod'] ?></p>
                             <p class="card-title">Precio: $<?= $producto['precio'] ?></p>

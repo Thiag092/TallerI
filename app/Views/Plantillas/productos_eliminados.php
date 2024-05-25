@@ -7,9 +7,8 @@
         <div class="row row-cols-1 row-cols-md-3 g-4 staff-cards">
                         <?php foreach($productos as $producto ): ?>
                 <?php if($producto['eliminado'] == "SI"): ?>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
-                        <div class="card h-100">
-                            <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" class="card-img-top" style="height: 300px; object-fit: cover;">
+                    <div class="col-xs-12 col-m-6 col-lg-4 p-2">                        <div class="card h-100">
+                            <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" class="card-img-top" style="height: 400px; object-fit: cover;">
                             <div class="card-body">
                                 <p class="card-text text-center" style="font-size: 20px; font-weight: bold;"><?= $producto['nombre_prod'] ?></p>
                                 <p class="card-title">Precio: $<?= $producto['precio'] ?></p>
