@@ -123,3 +123,31 @@ $routes->get('/restaurar_consulta/(:num)', 'consulta_controller::restaurarConsul
  */
 $routes->get('listar_ventas', 'Ventas_controller::ver_ventas', ['filter' => 'admin']);
 $routes->get('/ver_venta_detalle/(:num)', 'Ventas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);
+
+
+
+
+/**
+ * Rutas del carrito--------------------------------------------------------------------------------------------------
+ */
+$routes->get('/carrito', 'carrito_controller::ver_carrito', ['filter' => 'auth']);
+$routes->get('catalogo', 'carrito_controller::catalogo');
+$routes->post('carrito_agregar/(:num)', 'carrito_controller::agregar/$1', ['filter' => 'auth']);
+//$routes->post('carrito_agregar', 'carrito_controller::agregar',['filter' => 'auth']);
+$routes->get('sumar_a_carrito/(:any)', 'carrito_controller::sumar_carrito/$1', ['filter' => 'auth']);
+$routes->get('restar_a_carrito/(:any)', 'carrito_controller::restar_carrito/$1', ['filter' => 'auth']);
+$routes->get('remover_producto/(:any)', 'carrito_controller::remover_producto/$1', ['filter' => 'auth']);
+
+$routes->get('finalizar_compra', 'carrito_controller::guardar_compra', ['filter' => 'auth']);
+
+
+$routes->get('eliminar_carrito', 'carrito_controller::eliminar_carrito', ['filter' => 'auth']);
+
+
+
+
+/**Admin
+ * Rutas de las ventas ----------------------------------------------------------------------------------------------
+ */
+$routes->get('listar_ventas', 'Ventas_controller::ver_ventas', ['filter' => 'admin']);
+$routes->get('/ver_venta_detalle/(:num)', 'Ventas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);
