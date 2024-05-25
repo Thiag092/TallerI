@@ -101,14 +101,14 @@ $perfil = $session->get('perfil_id');
                         CRUD Productos
                     </a>
                 </li>
-                <li class="nav-item">
+              <!--  <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/crud_categorias'); ?>">
                         CRUD Categorías
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/consultas_view'); ?>">
-                        Responder consultas
+                        Ver Consultas
                     </a>
                 </li>
                 <li class="nav-item">
