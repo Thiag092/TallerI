@@ -1,17 +1,12 @@
 <div class="container-fluid justify-content-center">
 
     <div class="text-center mt-5 mb-4">
-        <h2>CRUD DE USUARIOS</h2>
+        <h2>Usuarios eliminados</h2>
     </div>
+    
     <div class="text-center p-2">
-
-        <button class="w-25 btn btn-primary btn-sm"
-            onclick="location.href='<?php echo base_url('registro'); ?>'">Agregar
-            nuevo Usuario</button>
-        <button class="w-25 btn btn-primary btn-sm"
-            onclick="location.href='<?php echo base_url('ver_usuarios_eliminados'); ?>'">Ver Usuarios eliminados</button>
-
-    </div>
+            <button class="w-22 btn btn-primary btn-sm" onclick="location.href='<?= base_url('crud_usuarios'); ?>'">Volver a la vista de usuarios</button>
+        </div>
 
     <!-- Validación -->
     <div>
@@ -37,13 +32,12 @@
                     <td>Nombre</td>
                     <td>Apellido</td>
                     <td>Email</td>
-                    <td>Dado de baja?</td>
-                    <td>Editar</td>
-                    <td>Eliminar</td>
+                    <td>Eliminado</td>
+                    <td>Restaurar?</td>
                 </tr>
                 <?php foreach ($usuarios as $usuario): ?>
                 <tr>
-                    <?php if ($usuario['baja'] == "NO"): ?>
+                    <?php if ($usuario['baja'] == "SI"): ?>
                     <td>
                         <?= $usuario['id_usuario'] ?>
                     </td>
@@ -53,12 +47,12 @@
                     <td>
                         <?= $usuario['apellido'] ?>
                     </td>
-                
+                    
                     <td>
                         <?= $usuario['email'] ?>
                     </td>
                     <?php foreach ($perfiles as $perfil) : ?>
-                        <?php if ($usuario['id_perfiles'] == $perfil['id_perfiles']) : ?>
+                        <?php if ($usuario['perfil_id'] == $perfil['id_perfil']) : ?>
                             <td>
                                 <?= $perfil['descripcion'] ?>
                             </td>
@@ -67,16 +61,10 @@
                     <td>
                         <?= $usuario['baja'] ?>
                     </td>
+                    
                     <td>
-                        <a href="<?php echo base_url(); ?>ver_editar_usuario/<?php echo $usuario['id_usuario']; ?>"
-                            class="btn btn-primary">
-                            <img class="img-fluid" src="<?= base_url('assets/img/edit.png') ?>" class="bi" width="24" height="24">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="<?php echo base_url(); ?>eliminar_usuario/<?php echo $usuario['id_usuario']; ?>"
-                            class="btn btn-danger">
-                            <img class="img-fluid" src="<?= base_url('assets/img/trash.png') ?>" class="bi" width="24" height="24">
+                        <a href="<?php echo base_url(); ?>restaurar_usuario/<?php echo $usuario['id_usuario']; ?>" class="btn btn-danger">
+                        <img class="img-fluid" src="<?= base_url('assets/img/back.png') ?>" class="bi" width="24" height="24">
                         </a>
                     </td>
                     <?php endif ?>
