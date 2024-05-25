@@ -40,18 +40,17 @@ class consulta_controller extends Controller {
             return $this->response->redirect(base_url('/contacto')); // Ajustar redirección si es necesario
         }
     }
-  public function ver_consultas($id = null)
-  {
-
-    $data['titulo'] = 'consulta';
-    $v_consulta_model = new Consulta_model();
-    $data['consulta'] = $v_consulta_model->orderBy('id_mensaje')->findAll();
-
-    echo view('front\head_view', $data);
-    echo view('front\nav_view');
-    echo view('back\consultas\consultas_view', $data);
-    echo view('front\footer_view.php');
-  }
+    public function ver_consultas($id = null)
+    {
+        $data['titulo'] = 'consulta';
+        $v_consulta_model = new consulta_model();
+        $data['consultas'] = $v_consulta_model->orderBy('id_mensaje')->findAll(); // Cambia 'consulta' por 'consultas'
+    
+        echo view('Plantillas/encabezado', $data);
+        echo view('Plantillas/consultas_listado', $data);
+        echo view('Plantillas/footer');
+    }
+    
 
   public function ver_consultas_respondidas($id = null)
   {
