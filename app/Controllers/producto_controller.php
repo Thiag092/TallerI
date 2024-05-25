@@ -35,6 +35,27 @@ class producto_controller extends Controller {
         echo view('Plantillas/footer');
     }
 
+    public function vistaEditarProducto($id = null) {
+
+        $productoModel = new producto_model();
+        
+        $data['titulo'] = 'Editar producto';
+        $categoriaModel = new categoria_model();
+        
+        $data['categorias'] = $categoriaModel->orderBy('id', 'DESC')->findAll();
+        //$id= $this->request->getPostGet('id');
+        //$data['producto'] = $productoModel->where('id', $id)->first();
+        $data['old'] = $productoModel->where('id_producto', $id)->first();
+        //dd($data['old']['cod_categoria']);
+        $data['categoria_producto'] = $categoriaModel->where('id', $data['old']['cod_categoria'])->first();
+        //dd($data);
+        echo view('Plantillas/encabezado', $data);
+        echo view('Plantillas/edit_producto', $data);
+        echo view('Plantillas/footer');
+    }
+
+
+
     public function alta_producto()
     {
         $rules = [
@@ -77,5 +98,158 @@ class producto_controller extends Controller {
             echo view('Plantillas/alta_producto_view', $data);
             echo view('Plantillas/footer');
         }
+    }
+
+    public function editarProducto($id = null) {
+        /**Si tiene un nombre quiere decir que se debe agregar la regla para la imagen también */
+         helper(['url', 'form', 'html']);
+     
+            $rules = [
+            'nombre-prod' => [
+                'rules'  => 'required|min_length[3]',
+                'errors' => [
+                    'required' => 'A {field} debes colocar una descripción de al menos 3 letras.',
+                ],
+            ],
+        
+            'precio'=> [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'A {field} debes colocar un precio.',
+                ],
+            ],
+            'precio-venta'       => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'A {field} debes colocar un precio de venta.',
+                ],
+            ],
+            'stock' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'A {field} debes colocar el stock.',
+                ],
+            ],
+            'stock-min' =>
+            [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'A {field} debes colocar el stock mínimo.',
+                ],
+            ],
+            
+        ];
+
+        
+        /*Error de validación de codeIgniter Visto por el profesor Ivan Sambrana
+            https://forum.codeigniter.com/showthread.php?tid=86535&page=2
+
+            image/gif, image/png, image/jpeg
+            mime_in[field_name,image/png,image/jpeg]
+            'imagen' => [
+                'rules'  => 'is_image[imagen]',
+                'errors' => [
+                    'required' => 'A {field} debes subir una imagen.',
+                    'is_image[imagen]' => 'A {field} debe ser una imagen.',
+                ]
+            ],
+            */
+            
+       if (!($this->request->getFile('imagen')->getName() === "")) { 
+            $rules['imagen'] = [
+                'rules' => 'required|mime_in[imagen, image/gif,image/png,image/jpeg]',
+                'errors' => [
+                    'required' => 'A {field} debes subir una imagen.',
+                ],
+            ];
+        }
+        
+        $producto = new Producto_model();
+        //var_dump($rules);
+        $this->validate($rules);
+       
+        //exit();
+        if ($this->validate($rules)) {
+
+            //Si no se subió una imagen se asume que no actualizara imagen
+            
+            
+            if (!($this->request->getFile('imagen')->getName() === "")) {      
+                //var_dump($rules);
+                //exit();       
+                
+
+                
+                $img = $this->request->getFile('imagen');
+                $nombre_aleatorio = $img->getRandomName();
+                $img->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
+
+                $data = [
+                    'nombre_prod' => $this->request->getVar('nombre-prod'),
+                    'imagen' => $img->getName(),
+                    'categoria_id' => $this->request->getVar('cod_categoria'),
+                    'precio' => $this->request->getVar('precio'),
+                    'precio_vta' => $this->request->getVar('precio-venta'),
+                    'stock' => $this->request->getVar('stock'),
+                    'stock_min' => $this->request->getVar('stock-min'),
+                    //'eliminado' => NO
+                ];
+
+                $producto->update($id, $data);
+                session()->setFlashdata('success', 'Producto EDITADO con exito!');
+                return $this->response->redirect(site_url('/crud'));
+
+            } else {
+                $data  = [
+                    'nombre_prod' => $this->request->getVar('nombre-prod'),
+                    'categoria_id' => $this->request->getVar('cod_categoria'),
+                    'precio' => $this->request->getVar('precio'),
+                    'precio_vta' => $this->request->getVar('precio-venta'),
+                    'stock' => $this->request->getVar('stock'),
+                    'stock_min' => $this->request->getVar('stock-min'),
+                    //'eliminado' => NO
+                ];
+
+                $producto->update($id, $data);
+                
+                return $this->response->redirect(site_url('/crud'));
+                
+            }
+        
+            
+
+        } else {
+            /***Se muestran los errores */
+            
+            //$producto = new Producto_model();
+            //$dato['validation'] = $this->validator;
+            $data['old'] = $producto->where('id_producto', $id)->first();
+            $categoriaModel = new Categoria_model();
+            //$data['categorias'] = $categoriaModel->orderBy('id_categoria', 'DESC')->findAll();
+            $data['categoria_producto'] = $categoriaModel->where('id', $data['old']['categoria_id'])->first();
+            //dd($data['categoria_producto']);
+            $data['validation'] = $this->validator;
+            $data['categorias'] = $categoriaModel->orderBy('id_categoria', 'DESC')->findAll();
+            $data['categoria_producto'] = $categoriaModel->where('id', $data['old']['categoria_id'])->first();
+            $dato['titulo'] = 'Editar producto';
+            echo view('Plantillas/encabezado', $data);
+            echo view('Plantillas/edit_producto', $data);
+            echo view('Plantillas/footer');
+            /*[
+                'validation' => $this->validator,
+                'old' => $producto->where('id_producto', $id)->first(),
+                'categorias' => $categoriaModel->orderBy('id_categoria', 'DESC')->findAll(),
+                'categoria_producto' => $categoriaModel->where('id_categoria', $data['old']['cod_categoria'])->first(),
+
+            ]*/
+             
+
+            /*if ($this->request->getVar('imagen') == NULL) {
+                echo '<script language="javascript">alert("No se cargo la imagen");</script>'; # code...
+            }*/
+        }
+
+    
+
     }
 }
