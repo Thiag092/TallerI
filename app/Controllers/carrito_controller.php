@@ -30,11 +30,12 @@ class carrito_controller extends Controller {
             'id'    => $producto['id_producto'],
             'qty'   => 1,
             'price' => $producto['precio'],
-            'name'  => $producto['descripcion_prod'],
+            'name'  => $producto['nombre_prod'],
         ));
         //var_dump( $cart);
         //exit();
         // $cart->destroy();
+        session()->setFlashdata('success', 'Producto agregado a tu carrito, click arriba en el mismo para ver');
         return redirect()->back()->withInput();
 
     }
@@ -114,11 +115,9 @@ class carrito_controller extends Controller {
         $productoModel = new producto_model();
         $data['productos'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
         
-        echo view('front\head_view', $data);
-        echo view('front\nav_view');
-        echo view('back\carrito\carrito_view');
-        echo view('front\footer_view.php');
-    }
+        echo view('Plantillas/encabezado', $data);
+        echo view('Plantillas/carrito');
+        echo view('Plantillas/footer');    }
 
     public function catalogo(){
 		

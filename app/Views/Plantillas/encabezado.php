@@ -82,6 +82,17 @@ $perfil = $session->get('perfil_id');
                         Nuestro catálogo
                     </a>
                 </li>
+
+                <li class="nav-item p-1">
+                        
+                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('/carrito'); ?>"><img
+                                src="<?php echo base_url('assets/img/carrito.png'); ?>" class="img-fluid"
+                                style="width: 30px; height: 30px; object-fit: contain;"></a>
+                    
+                    </li>
+
+
+
                 <li class="nav-item">
                     <a class="btn btn-danger" href="<?php echo base_url('cerrar-inicio'); ?>">
                         Cerrar sesión

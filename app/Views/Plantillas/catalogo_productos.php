@@ -23,12 +23,21 @@
 
 <div class="container-fluid d-flex justify-content-center">
     <div class="p-4">
+
+    
     <div class="card bg-white mb-3"> <!-- Agregar una tarjeta separada para el encabezado -->
             <div class="card-body">
                 <h2 class="text-center">Nuestros productos pensados para ustedes...</h2>
             </div>
            
         </div>
+
+        <?php if (session()->getFlashdata('success')) { ?>
+            <div class="mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <?= session()->getFlashdata('success') ?>
+            </div>
+        <?php } ?>
 
 
         <div class="text-center p-2"></div>
