@@ -5,11 +5,11 @@ use CodeIgniter\Controller;
 
 use App\Models\producto_model;
 use App\Models\usuario_model;
-use App\Models\VentasCabecera_model;
-use App\Models\VentasDetalle_model;
+use App\Models\ventasCabecera_model;
+use App\Models\ventasDetalle_model;
 
 class carrito_controller extends Controller {
-   /* public function __construct()
+    public function __construct()
     {
         helper(['form', 'url', 'cart']);
 
@@ -118,7 +118,7 @@ class carrito_controller extends Controller {
         echo view('front\nav_view');
         echo view('back\carrito\carrito_view');
         echo view('front\footer_view.php');
-    }*/
+    }
 
     public function catalogo(){
 		
@@ -191,8 +191,8 @@ class carrito_controller extends Controller {
         //dd($_SESSION['id_usuario']);
 
         //$usuario = new Usuarios_model();
-        $venta_detalle = new VentasDetalle_model();
-        $venta_cabecera = new VentasCabecera_model();
+        $venta_detalle = new ventasDetalle_model();
+        $venta_cabecera = new ventasCabecera_model();
         $producto = new producto_model();
 
         //trae el producto correspondiente con la id
