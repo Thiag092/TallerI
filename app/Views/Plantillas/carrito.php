@@ -1,8 +1,8 @@
 <div class="container-fluid justify-content-center">
 
-    <div class="text-center">
+    <div class="text-center mt-4 mtb-4">
         <div>
-            <h4>Productos en tu Carrito</h4>
+            <h2>Aquí divisarás los productos cargados a tu carrito</h2>
         </div>
     
         <div class="text-center">
