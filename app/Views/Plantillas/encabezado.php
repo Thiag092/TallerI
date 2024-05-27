@@ -72,7 +72,7 @@ $perfil = $session->get('perfil_id');
                     <a class="nav-link" href="<?php echo base_url('comercializacion'); ?>">Comercializacion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Contacto</a>
+                    <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Consultas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>

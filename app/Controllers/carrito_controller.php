@@ -35,7 +35,7 @@ class carrito_controller extends Controller {
         //var_dump( $cart);
         //exit();
         // $cart->destroy();
-        session()->setFlashdata('success', 'Producto agregado a tu carrito, click arriba en el mismo para ver');
+        session()->setFlashdata('success', 'Producto agregado a tu carrito! Click arriba en el mismo para ver.');
         return redirect()->back()->withInput();
 
     }
@@ -253,10 +253,9 @@ class carrito_controller extends Controller {
 		$data['perfil_id'] = $_SESSION['id_usuario'];
 		$data['nombre_apellido'] = $_SESSION['nombre'] . " " . $_SESSION['apellido'];
         $data['cabecera_id'] = $cabecera_id;
-        echo view('front\head_view', $data);
-        echo view('front\nav_view');
-        echo view('back\carrito\compra_finalizada_view', $data);
-        echo view('front\footer_view.php');
+        echo view('Plantillas/encabezado', $data);
+        echo view('Plantillas/compra_finalizada', $data);
+        echo view('Plantillas/footer', $data);
 	
 
 		//$final = $this->cart->destroy();

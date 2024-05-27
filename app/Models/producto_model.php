@@ -69,4 +69,29 @@ class producto_model extends Model
         }
     }*/
 
+
+
+    public function sacar_del_stock($id, $cantidad)
+    {
+        // Obtiene el producto por su ID
+        $producto = $this->find($id);
+
+        if ($producto) {
+            // Calcula el nuevo stock
+            $nuevo_stock = $producto['stock'] - $cantidad;
+
+            // Asegura que el stock no sea negativo
+            if ($nuevo_stock < 0) {
+                $nuevo_stock = 0;
+            }
+
+            // Actualiza el stock en la base de datos
+            $this->update($id, ['stock' => $nuevo_stock]);
+
+            return true;
+        }
+
+        return false;
+    }
+
 }
