@@ -73,3 +73,16 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\carrito_controller))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 22:53:56 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\proyecto_ayala_yago\app\Controllers\vtas_controller.php on line 51
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\vtas_controller.php(51): view('Plantillas/encabezado', null)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\vtas_controller->ver_venta_detalle('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vtas_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 23:21:01 --> Cannot use object of type App\Models\usuario_model as array
+in APPPATH\Controllers\vtas_controller.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\vtas_controller->ver_venta_detalle('1')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vtas_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

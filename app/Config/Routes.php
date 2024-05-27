@@ -121,8 +121,8 @@ $routes->get('/restaurar_consulta/(:num)', 'consulta_controller::restaurarConsul
 /**Admin
  * Rutas de "MOSTRAR VENTAS"" --------------------------------------------------------------------------------------
  */
-$routes->get('listar_ventas', 'Ventas_controller::ver_ventas', ['filter' => 'admin']);
-$routes->get('/ver_venta_detalle/(:num)', 'Ventas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);
+$routes->get('listar_ventas', 'vtas_controller::ver_ventas', ['filter' => 'admin']);
+$routes->get('/ver_venta_detalle/(:num)', 'vtas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);
 
 
 
@@ -140,7 +140,6 @@ $routes->get('remover_producto/(:any)', 'carrito_controller::remover_producto/$1
 
 $routes->get('finalizar_compra', 'carrito_controller::guardar_compra', ['filter' => 'auth']);
 
-
 $routes->get('eliminar_carrito', 'carrito_controller::eliminar_carrito', ['filter' => 'auth']);
 
 
@@ -149,5 +148,5 @@ $routes->get('eliminar_carrito', 'carrito_controller::eliminar_carrito', ['filte
 /**Admin
  * Rutas de las ventas ----------------------------------------------------------------------------------------------
  */
-$routes->get('listar_ventas', 'Ventas_controller::ver_ventas', ['filter' => 'admin']);
-$routes->get('/ver_venta_detalle/(:num)', 'Ventas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);
+$routes->get('listar_ventas', 'vtas_controller::ver_ventas', ['filter' => 'admin']);
+$routes->get('/ver_venta_detalle/(:num)', 'vtas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);

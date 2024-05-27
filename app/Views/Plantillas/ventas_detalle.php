@@ -1,22 +1,29 @@
 <div class="container-fluid">
-    <div class="text-center p-4">
-    <?php if (session()->getFlashdata('success')) { ?>
-            <div class="mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <?= session()->getFlashdata('success') ?>
-            </div>
-        <?php } ?>
-        <h1>¡Gracias por su compra, esperamos tu regreso pronto!</h1>
+
+   <
+   
+   
+
+    <div class=" p-2">
+        <a class="w-20 btn btn-primary btn-sm" href="<?php echo base_url('listar_ventas') ?>">
+            Volver
+        </a>
+        <div class="text-center p-4">
+        <h2>Detalles de la venta</h2>
     </div>
+        </div>
+        
+
     <div class="row">
         <div class="col-md-6 offset-md-3 card p-4">
             <h2 class="text-center">Factura</h2>
             <hr>
+            <h5>Numero de factura: <?php echo $cabecera_id?></h5>
             <div class="row">
                 <div class="col-md-6">
                     <h5>Emisor:</h5>
-                    <p>GlaxyGuitars S.A.</p>
-                    <p>Dirección:  Junin 123, Ctes. Cap. - Arg.</p>
+                    <p>GalaxyGuitars S.A.</p>
+                    <p>Dirección:  Junin 123, Ctes. Cap - Arg.</p>
                 </div>
                 <div class="col-md-6">
                     <h5>Cliente:</h5>
@@ -35,18 +42,20 @@
                     </thead>
                     <tbody>
                         <?php foreach ($ventas_detalle as $item) : ?>
-                            <tr>
-                                <?php foreach ($productos as $producto) : ?>
-                                    <?php if ($producto['id_producto'] == $item['producto_id']) : ?>
-                                        <td><?php echo $producto['nombre_prod'] ?></td>
-                                    <?php endif ?>
-                                <?php endforeach ?>
-                            
-                            <td><?php echo $item['cantidad'] ?></td>
-                            <td><?php echo $item['precio'] ?></td>
-                            <td><?php echo $item['cantidad']  * $item['precio']?></td>
-                        </tr>
+                            <?php if ($item['venta_id'] == $cabecera_id) : ?>
+                                <tr>
+                                    <?php foreach ($productos as $producto) : ?>
+                                        <?php if ($producto['id_producto'] == $item['producto_id']) : ?>
+                                            <td><?php echo $producto['nombre_prod'] ?></td>
+                                        <?php endif ?>
+                                    <?php endforeach ?>
+                                        <td><?php echo $item['cantidad'] ?></td>
+                                        <td><?php echo $item['precio'] ?></td>
+                                        <td><?php echo $item['cantidad']  * $item['precio']?></td>
+                                </tr>
+                            <?php endif ?>
                         <?php endforeach ?>
+                            
                         
                     
                     </tbody>
@@ -63,9 +72,5 @@
             
         </div>
     </div>
-    <div class="container-fluid text-center p-4">
-        <a class="btn btn-primary btn-block" href="<?php echo base_url('/') ?>">
-            Volver al inicio
-        </a>
-    </div>
+    
 </div>

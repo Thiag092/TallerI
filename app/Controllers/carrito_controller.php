@@ -253,7 +253,9 @@ class carrito_controller extends Controller {
 		$data['perfil_id'] = $_SESSION['id_usuario'];
 		$data['nombre_apellido'] = $_SESSION['nombre'] . " " . $_SESSION['apellido'];
         $data['cabecera_id'] = $cabecera_id;
+        
         echo view('Plantillas/encabezado', $data);
+        session()->setFlashdata('success', 'Compra realizada con exito!');
         echo view('Plantillas/compra_finalizada', $data);
         echo view('Plantillas/footer', $data);
 	
