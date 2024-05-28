@@ -43,7 +43,7 @@
                                 <?= $venta_cabecera['fecha'] ?>
                             </td>
                             <td>
-                                <?= $venta_cabecera['mail'] ?>
+                                <?= $venta_cabecera['email'] ?>
                             </td>
                             <td>
                                 <?= $venta_cabecera['total_ventas'] ?>
