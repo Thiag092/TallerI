@@ -188,7 +188,8 @@ class carrito_controller extends Controller {
         //$productoModel->where('id_producto', $id)->first();
         //dd($_SESSION['logged_in']);
         //dd($_SESSION['id_usuario']);
-
+// Obtener el correo electrónico del usuario desde la sesión
+$correo_usuario = $session->get('email');//----------------------------------------------------------
         //$usuario = new Usuarios_model();
         $venta_detalle = new ventasDetalle_model();
         $venta_cabecera = new ventasCabecera_model();
@@ -208,7 +209,7 @@ class carrito_controller extends Controller {
 
 		$venta = array(
 			'fecha' 		=> date('Y-m-d'),
-			'usuario_id' 	=> $_SESSION['id_usuario'],
+			'email' => $correo_usuario, //-------------------- esto se agrego para que me guarde el mail------------------
 			'total_ventas'	=> $total,
 		);
 		//$venta_id = $this->carrito_model->insert_venta($venta);
