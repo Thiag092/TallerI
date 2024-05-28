@@ -32,7 +32,7 @@ class vtas_controller extends Controller {
     $venta_cabecera = $venta_cabecera->where('id_ventas_cabecera', $id)->first();
 
     $v_usuario = new usuario_model();
-    $v_usuario = $v_usuario->where('id_usuario', $venta_cabecera['usuario_id'])->findAll();
+    $v_usuario = $v_usuario->where('email', $venta_cabecera['email'])->findAll();
 
     $venta_detalle = new ventasDetalle_model();
     $producto = new producto_model();
