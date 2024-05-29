@@ -2,7 +2,7 @@
 
     <div class="text-center mt-4 mtb-4">
         <div>
-            <h2>Aquí divisarás los productos cargados a tu carrito</h2>
+            <h2>Aquí divisarás los productos cargados a tu carrito.</h2>
         </div>
     
         <div class="text-center">
@@ -15,7 +15,7 @@
                 // Si el carrito está vació, mostrar el siguiente mensaje
                 if (empty($cart)) 
                 {
-                    echo 'Para agregar productos al carrito, click en "Comprar"';
+                    echo 'Para agregar productos al carrito, visite nuestro catalogo.';
                 }  
                 ?>
         </div>

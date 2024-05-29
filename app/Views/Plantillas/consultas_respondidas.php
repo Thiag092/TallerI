@@ -1,7 +1,7 @@
 <div class="container-fluid justify-content-center">
 
 <div class="text-center mt-4 mb-4">
-        <h2>Listado de consultas ya respondidas</h2>
+        <h2>Listado de consultas respondidas.</h2>
     </div>
     <div class="text-center p-2">
 

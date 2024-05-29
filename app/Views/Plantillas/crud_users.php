@@ -1,15 +1,15 @@
 <div class="container-fluid justify-content-center">
 
     <div class="text-center mt-5 mb-4">
-        <h2>CRUD DE USUARIOS</h2>
+        <h2>CRUD DE USUARIOS ACTIVOS</h2>
     </div>
     <div class="text-center p-2">
 
-        <button class="w-25 btn btn-primary btn-sm"
+       <!-- <button class="w-25 btn btn-primary btn-sm"       Aca es un boton que se saco, porque no debe poder agregar nuevos usuarios
             onclick="location.href='<?php echo base_url('registro'); ?>'">Agregar
-            nuevo Usuario</button>
+            nuevo Usuario</button>-->
         <button class="w-25 btn btn-primary btn-sm"
-            onclick="location.href='<?php echo base_url('ver_usuarios_eliminados'); ?>'">Ver Usuarios eliminados</button>
+            onclick="location.href='<?php echo base_url('ver_usuarios_eliminados'); ?>'">Ver listado de usuarios dados de baja</button>
 
     </div>
 
@@ -37,8 +37,7 @@
                     <td>Nombre</td>
                     <td>Apellido</td>
                     <td>Email</td>
-                    <td>Dado de baja?</td>
-                    <td>Editar</td>
+                    <td>Poner aca el usuario</td>
                     <td>Eliminar</td>
                 </tr>
                 <?php foreach ($usuarios as $usuario): ?>
@@ -67,12 +66,12 @@
                     <td>
                         <?= $usuario['baja'] ?>
                     </td>
-                    <td>
-                        <a href="<?php echo base_url(); ?>ver_editar_usuario/<?php echo $usuario['id_usuario']; ?>"
+                   <!--  <td>
+                       <a href="<?php echo base_url(); ?>ver_editar_usuario/<?php echo $usuario['id_usuario']; ?>"
                             class="btn btn-primary">
                             <img class="img-fluid" src="<?= base_url('assets/img/edit.png') ?>" class="bi" width="24" height="24">
-                        </a>
-                    </td>
+                        </a>       Se saca este boton porque no debe poder editar los usuarios 
+                    </td>-->
                     <td>
                         <a href="<?php echo base_url(); ?>eliminar_usuario/<?php echo $usuario['id_usuario']; ?>"
                             class="btn btn-danger">

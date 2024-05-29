@@ -302,3 +302,8 @@ margin-right: 30px;
   width: 100px !important; /* Ajusta este valor según tus necesidades */
   height: auto !important; /* Mantiene la proporción de la imagen */
 }
+
+#indice{
+  justify-content: center;
+  text-align: center;
+}

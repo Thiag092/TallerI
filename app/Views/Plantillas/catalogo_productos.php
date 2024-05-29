@@ -69,7 +69,7 @@
         
         <!-- Paginación -->
         <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center text-center"> <!-- Añadir la clase "text-center" para centrar el índice de páginas -->
+            <ul class="pagination justify-content-center text-center" id="indice"> <!-- Añadir la clase "text-center" para centrar el índice de páginas -->
                 <?php for($i = 1; $i <= $total_paginas; $i++): ?>
                     <li class="page-item <?php echo ($i == $pagina_actual) ? 'active' : ''; ?>" style="display: inline-block;">
                         <a class="page-link" href="<?php echo base_url('catalogo').'?page='.$i; ?>"><?php echo $i; ?></a>

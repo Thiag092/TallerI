@@ -15,7 +15,7 @@
 
 <div class="container-fluid justify-content-center">
     <div class="text-center mt-4 mb-4">
-        <h2>Listado de consultas pendientes de respuesta</h2>
+        <h2>Listado de consultas pendientes de responder.</h2>
     </div>
     <div class="text-center p-2">
         <button class="w-25 btn btn-primary btn-sm" onclick="location.href='<?php echo base_url('ver_consultas_respondidas'); ?>'">Ver consultas respondidas</button>

@@ -1,11 +1,11 @@
 <div class="container-fluid justify-content-center">
 
     <div class="text-center mt-5 mb-4">
-        <h2>Usuarios eliminados</h2>
+        <h2>Listado de usuarios dados de baja.</h2>
     </div>
     
     <div class="text-center p-2">
-            <button class="w-22 btn btn-primary btn-sm" onclick="location.href='<?= base_url('crud_usuarios'); ?>'">Volver a la vista de usuarios</button>
+            <button class="w-22 btn btn-primary btn-sm" onclick="location.href='<?= base_url('crud_usuarios'); ?>'">Volver a la vista de usuarios activos.</button>
         </div>
 
     <!-- Validación -->
@@ -32,7 +32,7 @@
                     <td>Nombre</td>
                     <td>Apellido</td>
                     <td>Email</td>
-                    <td>Eliminado</td>
+                    <td>Poner aca el usuario</td>
                     <td>Restaurar?</td>
                 </tr>
                 <?php foreach ($usuarios as $usuario): ?>
