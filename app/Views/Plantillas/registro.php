@@ -53,6 +53,30 @@
                     </div>
                   </div>
 
+
+
+
+                  <div class="mb-4">
+                    <label for="nombre_usuario" class="form-label"><i class="fa-solid fa-envelope"></i> Nombre de usuario:</label>
+                    <input name="nombre_usuario" type="text" class="form-control" value="<?php echo set_value('nombre_usuario')?>" id="nombre_usuario" placeholder="Ej: fulano123" required>
+                    <div class="invalid-feedback">
+                      Por favor, elija otro nombre de usuario.
+                    </div>
+                    <?php if($validation->getError('nombre_usuario')): ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $validation->getError('nombre_usuario'); ?>
+                        </div>
+                    <?php endif; ?>
+                  </div>
+
+
+
+
+
+
+
+
+
                   <div class="mb-4">
                     <label for="email" class="form-label"><i class="fa-solid fa-envelope"></i> E-mail</label>
                     <input name="email" type="email" class="form-control" value="<?php echo set_value('email')?>" id="email" placeholder="tuMail@ejemplo.com" required>

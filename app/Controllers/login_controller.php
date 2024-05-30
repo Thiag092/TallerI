@@ -24,10 +24,10 @@ public function authenticate() {
     $session = session();                   //se obtiene una insancia de sesion
     $model = new usuario_model();            // crea una instancia del modelo usuario_model para poder interactuar con la base de datos
 
-    $email = $this->request->getVar('email');//se obtienen los valores que se enviaron desde el formulario del login (email y pass)
+    $email = $this->request->getVar('nombre_usuario');//se obtienen los valores que se enviaron desde el formulario del login (email y pass)
     $password = $this->request->getVar('pass');
 
-    $data = $model->where('email', $email)->first();//segun el mail que se cargo, busca un usuario con ese mismo correo.
+    $data = $model->where('nombre_usuario', $email)->first();//segun el mail que se cargo, busca un usuario con ese mismo correo.
     //o sea, especifica una condición para la consulta: busca filas en la tabla usuario donde la columna email coincide con el valor 
     //de la variable $email.
     //En otras palabras, esta parte de la consulta dice "encuentra la fila en la tabla usuario donde el correo electrónico sea igual al 
@@ -43,13 +43,15 @@ public function authenticate() {
                 'id'       => $data['id'],
                 'nombre'     => $data['nombre'],
                 'apellido' => $data['apellido'],
+                'nombre_usuario'     => $data['nombre_usuario'],
                 'email'    => $data['email'],
                 'perfil_id' => $data['perfil_id'],
                 'logged_in' => TRUE
             ];
             $session->set($ses_data);
             //return redirect()->to('/dashboard'); // Redirige al usuario a una página de dashboard
-            $session->setFlashdata('loginExitoso', 'Usario logueado con éxito, BIENVENIDO!');
+            $nombre_mayusculas = strtoupper($data['nombre']);
+            $session->setFlashdata('loginExitoso', 'Usuario logueado con éxito ¡BIENVENIDO ' . $nombre_mayusculas . '!');
             return redirect()->to('/principal');
         } else {
             $session->setFlashdata('passIncorrecto', 'Contraseña incorrecta, vuelva a intentar');

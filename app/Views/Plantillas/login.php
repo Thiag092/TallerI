@@ -57,10 +57,10 @@
   <div class="d-flex flex-row align-items-center mb-4">
     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
     <div class="form-outline flex-fill mb-0">
-      <label class="form-label" for="email">Correo</label>
-      <input type="text" id="email" name="email" class="form-control" placeholder="tuCorreo@Ejemplo.com" required />
+      <label class="form-label" for="nombre_usuario">Nombre de usuario:</label>
+      <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-control" placeholder="Ej: fulanito123" required />
       <div class="invalid-feedback">
-        Por favor, ingresa tu correo electronico (ej. tuMail@gmail.com).
+        Por favor, ingresa un nombre de usuario válido.
       </div>
     </div>
   </div>

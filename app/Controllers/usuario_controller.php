@@ -29,6 +29,7 @@ class usuario_controller extends Controller{
         $input = $this->validate([
             'nombre'   => 'required|min_length[3]|max_length[50]',
             'apellido' => 'required|min_length[3]|max_length[50]',
+            'nombre_usuario'  => 'required|min_length[3]|max_length[50]',
             'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuario.email]', //campo unico en la tabla 'usuario' campo 'email'
             'pass'     => 'required|min_length[5]|max_length[20]'
         ],);
@@ -56,6 +57,7 @@ class usuario_controller extends Controller{
             $formModel->save([
                 'nombre' => $this->request->getVar('nombre'),
                 'apellido'=> $this->request->getVar('apellido'),
+                'nombre_usuario'=> $this->request->getVar('nombre_usuario'),
                 'email'=> $this->request->getVar('email'),
                 'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
                 //password_hash() crea un nuevo hash de contraseña usando un algoritmo de hash de único sentido. (contraseña encriptada)
@@ -124,6 +126,7 @@ class usuario_controller extends Controller{
 
 
     //-----------------EDICION DE USUARIOS ------------------------------------------------
+    //----------------- EL PROFE DIJO QUE NO ES NECESARIO (ver_editarUsuario), YA QUE EL ADMIN NO DEBE PODER EDITAR EL USUARIO-------------
   public function ver_editarUsuario($id = null) 
   {
     $data['titulo'] = 'Editar Usuario';
