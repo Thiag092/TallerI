@@ -32,7 +32,7 @@
                     <td>Nombre</td>
                     <td>Apellido</td>
                     <td>Email</td>
-                    <td>Poner aca el usuario</td>
+                    <td>Nombre de usuario único</td>
                     <td>Restaurar?</td>
                 </tr>
                 <?php foreach ($usuarios as $usuario): ?>
@@ -59,11 +59,11 @@
                         <?php endif ?>
                     <?php endforeach ?>
                     <td>
-                        <?= $usuario['baja'] ?>
+                        <?= $usuario['nombre_usuario'] ?>
                     </td>
                     
                     <td>
-                        <a href="<?php echo base_url(); ?>restaurar_usuario/<?php echo $usuario['id_usuario']; ?>" class="btn btn-danger">
+                        <a href="<?php echo base_url(); ?>restaurar_usuario/<?php echo $usuario['id_usuario']; ?>" class="btn btn-success">
                         <img class="img-fluid" src="<?= base_url('assets/img/back.png') ?>" class="bi" width="24" height="24">
                         </a>
                     </td>

@@ -29,7 +29,7 @@ class usuario_controller extends Controller{
         $input = $this->validate([
             'nombre'   => 'required|min_length[3]|max_length[50]',
             'apellido' => 'required|min_length[3]|max_length[50]',
-            'nombre_usuario'  => 'required|min_length[3]|max_length[50]',
+            'nombre_usuario'  => 'required|min_length[3]|max_length[50]|is_unique[usuario.nombre_usuario]',
             'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuario.email]', //campo unico en la tabla 'usuario' campo 'email'
             'pass'     => 'required|min_length[5]|max_length[20]'
         ],);

@@ -1,3 +1,4 @@
+<div>
 <footer class="footer1">
       <div class="container text-center text-md-left mt-5">
         <div class="row text-center text-md-left">
@@ -79,6 +80,7 @@
 
       <p class="ultima">Desarrollado por Yago Ayala - Todos los derechos reservados-2024</p>
     </footer>
+</div>
 
       
 

@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div>
   <!--recuperamos datos con la función Flashdata para mostrarlos-->
   <?php if (session()->getFlashdata('success')): ?>
@@ -11,16 +12,16 @@
 <!--obtiene una instancia del servicio de validación de CodeIgniter y la asigna a la variable $validation-->
 <?php $validation = \Config\Services::validation(); ?>
 
-<section class="vh-100">
-  <div class="container h-100">
+<ction classse="vh-100">
+  <div class="container h-100 mt-4">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-9">
         <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
+          <div class="card-body">
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-8 col-xl-6 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registrate</p>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Por favor, registrate.</p>
 
                 <!--Envio de datos a la ruta 'procesar-registro'-->
                 <form class="mx-1 mx-md-4 needs-validation" action="<?php echo base_url('procesar-registro'); ?>" method="post" novalidate>
@@ -56,7 +57,8 @@
 
 
 
-                  <div class="mb-4">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
                     <label for="nombre_usuario" class="form-label"><i class="fa-solid fa-envelope"></i> Nombre de usuario:</label>
                     <input name="nombre_usuario" type="text" class="form-control" value="<?php echo set_value('nombre_usuario')?>" id="nombre_usuario" placeholder="Ej: fulano123" required>
                     <div class="invalid-feedback">
@@ -77,9 +79,9 @@
 
 
 
-                  <div class="mb-4">
+                  <div class="col-md-6 mb-4">
                     <label for="email" class="form-label"><i class="fa-solid fa-envelope"></i> E-mail</label>
-                    <input name="email" type="email" class="form-control" value="<?php echo set_value('email')?>" id="email" placeholder="tuMail@ejemplo.com" required>
+                    <input name="email" type="email" class="form-control" value="<?php echo set_value('email')?>" id="email" placeholder="ejemplo@gmail.com" required>
                     <div class="invalid-feedback">
                       Por favor, ingrese un correo electrónico válido.
                     </div>
@@ -89,6 +91,7 @@
                         </div>
                     <?php endif; ?>
                   </div>
+                  </div>
 
                   <div class="mb-4">
                     <label for="inputPassword5" class="form-label"><i class="fa-solid fa-lock"></i> Contraseña</label>
@@ -97,7 +100,7 @@
                       Por favor, ingrese una contraseña.
                     </div>
                     <div id="passwordHelpBlock" class="form-text">
-                      Entre 8 y 20 caracteres. Sin espacios ni caracteres especiales.
+                      Entre 5 y 20 caracteres. Sin espacios ni caracteres especiales.
                     </div>
                     <?php if($validation->getError('pass')): ?>
                         <div class='alert alert-danger mt-2'>
@@ -139,6 +142,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 

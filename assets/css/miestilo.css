@@ -307,3 +307,8 @@ margin-right: 30px;
   justify-content: center;
   text-align: center;
 }
+
+
+.mx-1 mx-md-4.needs-validation {
+  height: 500px; /* Adjust the value as needed */
+}

@@ -37,7 +37,7 @@
                     <td>Nombre</td>
                     <td>Apellido</td>
                     <td>Email</td>
-                    <td>Poner aca el usuario</td>
+                    <td>Nombre de usuario único</td>
                     <td>Eliminar</td>
                 </tr>
                 <?php foreach ($usuarios as $usuario): ?>
@@ -64,7 +64,7 @@
                         <?php endif ?>
                     <?php endforeach ?>
                     <td>
-                        <?= $usuario['baja'] ?>
+                        <?= $usuario['nombre_usuario'] ?>
                     </td>
                    <!--  <td>
                        <a href="<?php echo base_url(); ?>ver_editar_usuario/<?php echo $usuario['id_usuario']; ?>"
