@@ -32,7 +32,7 @@
                     <td>Fecha</td>
                     <td>Correo del cliente</td>
                     <td>Total de la venta</td>
-                    <td>Ir a</td>
+                    <td>Detalles de venta</td>
                 </tr>
                 <?php foreach ($v_ventas_cabecera as $venta_cabecera): ?>
                     <tr>
@@ -45,6 +45,7 @@
                             <td>
                                 <?= $venta_cabecera['email'] ?>
                             </td>
+                           
                             <td>
                                 <?= $venta_cabecera['total_ventas'] ?>
                             </td>

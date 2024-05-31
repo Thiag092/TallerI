@@ -15,7 +15,7 @@
 
 <div class="container-fluid justify-content-center">
     <div class="text-center mt-4 mb-4">
-        <h2>Listado de consultas pendientes de responder.</h2>
+        <h2>Listado de consultas pendientes.</h2>
     </div>
     <div class="text-center p-2">
         <button class="w-25 btn btn-primary btn-sm" onclick="location.href='<?php echo base_url('ver_consultas_respondidas'); ?>'">Ver consultas respondidas</button>
@@ -43,7 +43,7 @@
                                 <td><?= $consulta['tel'] ?></td>
                                 <td><?= $consulta['mensaje'] ?></td>
                                 <td>
-                                    <a href="<?php echo base_url(); ?>responder_consulta/<?php echo $consulta['id_mensaje']; ?>" class="btn btn-danger">
+                                    <a href="<?php echo base_url(); ?>responder_consulta/<?php echo $consulta['id_mensaje']; ?>" class="btn btn-success">
                                     <img class="img-fluid" src="<?= base_url('assets/img/reply.png') ?>" class="bi" width="24" height="24">
                                     </a>
                                 </td>
