@@ -32,12 +32,12 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label for="cod_categoria" class="form-label">Código de categoría</label>
-                    <select required name="cod_categoria" class="form-select">
+                    <label for="categoria_id" class="form-label">Código de categoría</label>
+                    <select required name="categoria_id" class="form-select">
                         <option value="">Elija una opción...</option>
                         <?php foreach ($categorias as $categoria): ?>
                             <option value="<?= $categoria['id']; ?>" <?= $categoria['id'] == $old['categoria_id'] ? 'selected' : ''; ?>>
-                                <?= $categoria['id']; ?> (<?= $categoria['nombre_categoria']; ?>)
+                                <?= $categoria['id']; ?> (<?= $categoria['categoria']; ?>)
                             </option>
                         <?php endforeach; ?>
                     </select>
