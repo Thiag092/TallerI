@@ -117,21 +117,44 @@ class carrito_controller extends Controller {
         
         echo view('Plantillas/encabezado', $data);
         echo view('Plantillas/carrito');
-        echo view('Plantillas/footer');    }
+        echo view('Plantillas/footer');   
+     }
 
-    public function catalogo(){
-		
-        $session=session();
+        public function catalogo(){
+            $productoModel = new producto_model();
         
-        $data['titulo'] = 'Todos los Productos';
-        $productoModel = new producto_model();
-        $data['productos'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
-            
-        echo view('Plantillas/encabezado', $data);
-        echo view('Plantillas/catalogo_productos', $data);
-        echo view('Plantillas/footer');
-	
-	}
+            // Filtra los productos eliminados y aquellos cuyo stock es mayor que el stock mínimo
+            $productosFiltrados = $productoModel->where('eliminado', 'NO')
+                                                ->where('stock >', 'stock_min')
+                                                ->findAll();
+        
+            // Paginación manual de los productos filtrados
+            $perPage = 6; // Número de productos por página
+            $page = (int)($this->request->getVar('page') ?? 1);
+            $totalProductos = count($productosFiltrados);
+            $totalPages = ceil($totalProductos / $perPage);
+            $offset = ($page - 1) * $perPage;
+            $productosPaginados = array_slice($productosFiltrados, $offset, $perPage);
+        
+            // Configurar el objeto `pager`
+            $pager = \Config\Services::pager();
+            $pager->makeLinks($page, $perPage, $totalProductos);
+        
+            $data = [
+                'productos' => $productosPaginados,
+                'pager' => $pager,
+                'totalPages' => $totalPages,
+                'currentPage' => $page
+            ];            
+        
+            $data['titulo'] = 'Todos los Productos';
+        
+            echo view('Plantillas/encabezado', $data);
+            echo view('Plantillas/catalogo_productos', $data);
+            echo view('Plantillas/footer');
+        }
+        
+
      public function borrar_carrito()
     {
         $cart = \Config\Services::cart();//para que incluya el $cart
@@ -265,5 +288,9 @@ $correo_usuario = $session->get('email');//-------------------------------------
         $this->borrar_carrito();
 
 	}
+
+
+
+    
 
 }

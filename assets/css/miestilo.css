@@ -312,3 +312,22 @@ margin-right: 30px;
 .mx-1 mx-md-4.needs-validation {
   height: 500px; /* Adjust the value as needed */
 }
+
+
+#pagina{
+  background-color: rgba(208, 205, 219);
+
+
+  align-items: center !important;
+
+  font-weight: bold !important;
+}
+
+
+#pagina ul.pagination li.page-item {
+  background-color: rgba(208, 205, 219, 1) !important;
+}
+
+#pagina ul.pagination li.page-item a.page-link {
+  background-color: rgba(208, 205, 219, 1) !important;
+}
