@@ -25,14 +25,16 @@
     <div class="text-center p-4">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped ml-3">
-                <tr>
-                    <td>ID</td>
-                    <td>Nombre</td>
-                    <td>Email</td>
-                    <td>Numero Telefónico</td>
-                    <td>Consulta</td>
-                    <td>Responder</td>
-                </tr>
+            <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Número telefónico</th>
+                        <th scope="col">Consulta</th>
+                        <th scope="col">Responder</th>
+                    </tr>
+                    </thead>
                 <?php if (isset($consultas) && !empty($consultas)): ?>
                     <?php foreach ($consultas as $consulta): ?>
                         <?php if ($consulta['respondido'] == "NO"): ?>

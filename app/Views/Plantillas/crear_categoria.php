@@ -1,7 +1,7 @@
 <div class="container-fluid p-4">
-    <a class="btn btn-primary" href="<?php echo base_url('/crud_categorias') ?>"><h5>Volver</h5></a>
+    
     <div class="text-center">
-        <h4 class="">Crear Categoría</h4>
+        <h2 class="">Crear nueva categoria</h2>
     </div>
 
     <!-- Validación -->
@@ -17,7 +17,7 @@
 
     <?php $validation = \Config\Services::validation(); ?>
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-4">
         <form method="post" action="<?php echo base_url('enviar_categoria');?>" enctype="multipart/form-data">
             <div class="row g-3 p-4">
                 <div class="col-12">
@@ -36,5 +36,10 @@
                 <button class="w-25 btn btn-primary btn-sm" type="submit">Guardar</button>
             </div>
         </form>
+        
     </div>
+    <div class="text-center p-2">
+    <a class="btn btn-primary" href="<?php echo base_url('/crud_categorias') ?>"><h5>Volver</h5></a>
+    </div>
+
 </div>

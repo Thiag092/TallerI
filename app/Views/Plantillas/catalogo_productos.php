@@ -52,7 +52,7 @@
     <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=2">2</a></li>
     <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=3">3</a></li>
     <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=4">4</a></li>
-    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=4">Ultimo</a></li>
+    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=5">5</a></li>
   </ul>
 </nav>
         

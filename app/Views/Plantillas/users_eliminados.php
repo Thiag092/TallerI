@@ -5,7 +5,7 @@
     </div>
     
     <div class="text-center p-2">
-            <button class="w-22 btn btn-primary btn-sm" onclick="location.href='<?= base_url('crud_usuarios'); ?>'">Volver a la vista de usuarios activos.</button>
+            <button class="w-22 btn btn-primary btn-sm" onclick="location.href='<?= base_url('crud_usuarios'); ?>'">Volver a la vista de usuarios activos</button>
         </div>
 
     <!-- Validación -->
@@ -27,14 +27,16 @@
     <div class="text-center p-4">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped table-striped ml-3">
-                <tr>
-                    <td>ID</td>
-                    <td>Nombre</td>
-                    <td>Apellido</td>
-                    <td>Email</td>
-                    <td>Nombre de usuario único</td>
-                    <td>Restaurar?</td>
-                </tr>
+            <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Correo electronico</th>
+                        <th scope="col">Nombre único de usuario</th>
+                        <th scope="col">¿Restaurar?</th>
+                    </tr>
+                    </thead>
                 <?php foreach ($usuarios as $usuario): ?>
                 <tr>
                     <?php if ($usuario['baja'] == "SI"): ?>

@@ -32,14 +32,16 @@
     <div class="text-center p-4">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped table-striped ml-3">
-                <tr>
-                    <td>ID</td>
-                    <td>Nombre</td>
-                    <td>Apellido</td>
-                    <td>Email</td>
-                    <td>Nombre de usuario único</td>
-                    <td>Eliminar</td>
-                </tr>
+            <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Correo electronico</th>
+                        <th scope="col">Nombre único de usuario</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                    </thead>
                 <?php foreach ($usuarios as $usuario): ?>
                 <tr>
                     <?php if ($usuario['baja'] == "NO"): ?>

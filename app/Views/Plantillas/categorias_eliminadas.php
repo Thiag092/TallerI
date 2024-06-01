@@ -22,11 +22,13 @@
     
             <div class="text-center p-4">
                 <table class="table table-bordered table-hover table-striped table-striped ml-3">
+                <thead>
                     <tr>
-                        <td>ID</td>
-                        <td>Nombre de categoría</td>
-                        <td>Estado</td>
+                    <th scope="col">ID</th>
+                        <th scope="col">Nombre categoria</th>
+                        <th scope="col">Estado</th>
                     </tr>
+                    </thead>
                     <?php foreach ($categorias as $categoria) : ?>
                         <tr>
                         <?php if ($categoria['categoria_eliminada'] == "SI") : ?>

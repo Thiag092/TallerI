@@ -1,7 +1,7 @@
 <div class="container-fluid justify-content-center">
 
-    <div class="text-center">
-        <h4>CRUD de Categorías</h4>
+    <div class="text-center mt-4">
+        <h2>CRUD DE CATEGORÍAS</h2>
     </div>
     <div class="text-center p-2">
     

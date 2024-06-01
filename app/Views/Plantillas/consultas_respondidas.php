@@ -28,14 +28,15 @@
     <div class="text-center p-4">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped table-striped ml-3">
-                <tr>
-                    <td>ID</td>
-                    <td>Nombre</td>
-                    <td>Email</td>
-                    <td>Numero Telefónico</td>
-                    <td>Consulta</td>
-                    <td>Respondido</td>
-                </tr>
+            <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Número telefónico</th>
+                        <th scope="col">Consulta</th>
+                    </tr>
+                    </thead>
                 <?php foreach ($consultas as $consulta): ?>
                     <tr>
                         <?php if ($consulta['respondido'] == "SI"): ?>
@@ -55,10 +56,7 @@
                             <td>
                                 <?= $consulta['mensaje'] ?>
                             </td>
-                            <td>
-
-                                <?= $consulta['respondido'] ?>
-                            </td>
+                            
                             
                         <?php endif ?>
                     </tr>
