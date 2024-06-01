@@ -26,14 +26,15 @@ class producto_controller extends Controller {
     }
 
     public function crearproducto()
-    {
-        $categoriaModel = new categoria_model();
-        $data['categorias'] = $categoriaModel->orderBy('id', 'DESC')->findAll();
-        $data['titulo'] = 'Alta producto';
-        echo view('Plantillas/encabezado', $data);
-        echo view('Plantillas/alta_producto_view', $data);
-        echo view('Plantillas/footer');
-    }
+{
+    $categoriaModel = new categoria_model();
+    $data['categorias'] = $categoriaModel->where('categoria_eliminada', 'NO')->orderBy('id', 'DESC')->findAll();
+    $data['titulo'] = 'Alta producto';
+    echo view('Plantillas/encabezado', $data);
+    echo view('Plantillas/alta_producto_view', $data);
+    echo view('Plantillas/footer');
+}
+
 
 
 public function vistaEditarProducto($id = null) {
@@ -48,7 +49,7 @@ public function vistaEditarProducto($id = null) {
     //$data['producto'] = $productoModel->where('id', $id)->first();
     $data['old'] = $productoModel->where('id_producto', $id)->first();
     //dd($data['old']['cod_categoria']);
-    $data['categoria_producto'] = $categoriaModel->where('id', $data['old']['cod_categoria'])->first();
+    $data['categoria_producto'] = $categoriaModel->where('id', $data['old']['categoria_id'])->first();
     //dd($data);
     echo view('Plantillas/encabezado', $data);
     echo view('Plantillas/edit_producto', $data);
@@ -190,7 +191,7 @@ public function editarProducto($id = null) {
             $data = [
                 'nombre_prod' => $this->request->getVar('nombre-prod'),
                 'imagen' => $img->getName(),
-                'categoria_id' => $this->request->getVar('cod_categoria'),
+                'categoria_id' => $this->request->getVar('categoria_id'),
                 'precio' => $this->request->getVar('precio'),
                 'precio_vta' => $this->request->getVar('precio-venta'),
                 'stock' => $this->request->getVar('stock'),

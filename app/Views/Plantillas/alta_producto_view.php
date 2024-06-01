@@ -38,22 +38,24 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label for="cod_categoria" class="form-label">Código de categoría</label>
-                        <select name="cod_categoria" class="form-select" required>
-                            <option value="">Elija una opción...</option>
-                            <option value="1">1 (Stratocaster)</option>
-                            <option value="2">2 (Les Paul)</option>
-                            <option value="3">3 (Ediciones especiales)</option>
-                            <?php if ($validation->getError('cod_categoria')): ?>
-                                <div class='alert alert-danger mt-2'>
-                                    <?= $error = $validation->getError('cod_categoria'); ?>
-                                </div>
-                            <?php endif; ?>
-                            <div class="invalid-feedback">
-                                Seleccione un código válido.
-                            </div>
-                        </select>
-                    </div>
+    <label for="cod_categoria" class="form-label">Código de categoría</label>
+    <select name="cod_categoria" class="form-select" required>
+        <option value="">Elija una opción...</option>
+        <?php foreach ($categorias as $categoria): ?>
+            <option value="<?= $categoria['id'] ?>"><?= $categoria['id'] ?> (<?= $categoria['categoria'] ?>)</option>
+        <?php endforeach; ?>
+    </select>
+    <!-- Error -->
+    <?php if ($validation->getError('cod_categoria')): ?>
+        <div class='alert alert-danger mt-2'>
+            <?= $error = $validation->getError('cod_categoria'); ?>
+        </div>
+    <?php endif; ?>
+    <div class="invalid-feedback">
+        Seleccione un código válido.
+    </div>
+</div>
+
 
                     <div class="col-sm-6">
                         <label for="precio" class="form-label">Precio</label>
