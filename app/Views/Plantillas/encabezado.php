@@ -24,7 +24,7 @@ $perfil = $session->get('perfil_id');
 //exit();
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark" id="barra">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo base_url('principal'); ?>">
             <img class="icono" src="<?= base_url('assets/img/logo_alien.png') ?>" alt="probando logo') ?>" >

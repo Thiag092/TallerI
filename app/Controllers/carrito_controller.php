@@ -22,23 +22,28 @@ class carrito_controller extends Controller {
     {
         $cart = \Config\Services::Cart();
         $request = \Config\Services::request();
-
-        $producto = new producto_model();
-        $producto = $producto->where('id_producto', $id)->first();
-
-        $cart->insert(array(
-            'id'    => $producto['id_producto'],
-            'qty'   => 1,
-            'price' => $producto['precio'],
-            'name'  => $producto['nombre_prod'],
-        ));
-        //var_dump( $cart);
-        //exit();
-        // $cart->destroy();
-        session()->setFlashdata('success', 'Producto agregado a tu carrito! Click arriba en el mismo para ver.');
+    
+        $productoModel = new producto_model();
+        $producto = $productoModel->where('id_producto', $id)->first();
+    
+        // Debugging: Print product data
+        // print_r($producto);
+    
+        if ($producto) {
+            $cart->insert(array(
+                'id'    => $producto['id_producto'],
+                'qty'   => 1,
+                'price' => $producto['precio'],
+                'name'  => $producto['nombre_prod'],
+            ));
+            session()->setFlashdata('success', 'Producto agregado a tu carrito! Click arriba en el mismo para ver.');
+        } else {
+            session()->setFlashdata('error', 'El producto no se pudo encontrar.');
+        }
+    
         return redirect()->back()->withInput();
-
     }
+    
     public function sumar_carrito($id = null){
         $cart = \Config\Services::cart();
         $producto = new producto_model();
