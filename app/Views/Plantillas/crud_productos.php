@@ -14,7 +14,7 @@
         </div>
 
         <div class="row p-2">
-            <table class="table table-striped">
+            <table class="table table-bordered table-hover table-striped table-striped ml-3">
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>

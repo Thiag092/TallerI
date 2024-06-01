@@ -150,3 +150,22 @@ $routes->get('eliminar_carrito', 'carrito_controller::eliminar_carrito', ['filte
  */
 $routes->get('listar_ventas', 'vtas_controller::ver_ventas', ['filter' => 'admin']);
 $routes->get('/ver_venta_detalle/(:num)', 'vtas_controller::ver_venta_detalle/$1', ['filter' => 'admin']);
+
+
+
+/**RUTAS DE CRUD DE CATEGORIAS--------------------------------------- */
+$routes->get('crud_categorias', 'categoria_controller::index', ['filter' => 'admin']);
+
+$routes->get('/categoria_form', 'categoria_controller::crearcategoria', ['filter' => 'admin']);
+
+$routes->post('/enviar_categoria', 'categoria_controller::alta_categoria', ['filter' => 'admin']);
+
+$routes->get('/vista_editar_categoria/(:num)', 'categoria_controller::vistaEditarCategoria/$1', ['filter' => 'admin']);
+
+$routes->get('/categoria_eliminados', 'categoria_controller::vista_categoria_eliminados', ['filter' => 'admin']);
+
+$routes->post('/editar_categoria/(:num)', 'categoria_controller::editarCategoria/$1', ['filter' => 'admin']);
+
+$routes->get('/eliminar_categoria/(:num)', 'categoria_controller::eliminarCategoria/$1', ['filter' => 'admin']);
+
+$routes->get('/restaurar_categoria/(:num)', 'categoria_controller::restaurarCategoria/$1', ['filter' => 'admin']);
