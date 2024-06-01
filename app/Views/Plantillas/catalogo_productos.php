@@ -1,7 +1,7 @@
 <div class="container-fluid d-flex justify-content-center">
-    <div class="p-4">
+    <div class="">
     
-        <div class="card bg-white mb-3">
+        <div class="card bg-white mt-2">
             <div class="card-body">
                 <h2 class="text-center">Nuestros productos pensados para ustedes...</h2>
             </div>
@@ -16,7 +16,7 @@
 
         <div class="text-center p-2"></div>
         
-        <div class="row p-2">
+        <div class="row">
             <?php if(!empty($productos)): ?>
                 <?php foreach($productos as $producto ):?>
                     <div class="col-xs-12 col-m-6 col-lg-4 p-2">
@@ -44,11 +44,19 @@
         </div>
         
         <!-- Paginación -->
-        <nav aria-label="Page navigation example" id="pagina">
-            <ul class="pagination">
-                <?= $pager->links(); ?>
-            </ul>
-        </nav>
+        <div class="indice">
+        <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=1">Primero</a></li>
+    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=1">1</a></li>
+    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=3">3</a></li>
+    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=4">4</a></li>
+    <li class="page-item"><a class="page-link" href="http://localhost/proyecto_ayala_yago/index.php/catalogo?page=4">Ultimo</a></li>
+  </ul>
+</nav>
+        
+    </div>
     </div>
     
 </div>

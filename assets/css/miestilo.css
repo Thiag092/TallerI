@@ -30,7 +30,7 @@ ul li {
   font-weight: bold;
 }
 
-nav {
+.navbar {
   background-color: rgb(22,7,72);
   display: flex;
   align-items: center;
@@ -41,24 +41,25 @@ nav {
   font-weight: bold;
 }
 
-.nav-link {
+.navbar-link {
   color: white !important;
   text-decoration: none;
 }
 
 
 
-.nav-link:hover {
+.navbar-link:hover {
   color: rgb(214,51,124) !important;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
-.nav-item{
-  margin-right: 30px;
+.navbar-item{
+  margin-right: 30px !important;
 }
-.nav-item:hover{
-  margin-right: 30px;
-  text-decoration: underline;
+.navbar-item:hover{
+  margin-right: 30px !important;
+  text-decoration: underline !important;
+  color: rgb(214,51,124) !important;
 }
 
 .logo{
@@ -303,10 +304,6 @@ margin-right: 30px;
   height: auto !important; /* Mantiene la proporción de la imagen */
 }
 
-#indice{
-  justify-content: center;
-  text-align: center;
-}
 
 
 .mx-1 mx-md-4.needs-validation {
@@ -314,20 +311,13 @@ margin-right: 30px;
 }
 
 
-#pagina{
-  background-color: rgba(208, 205, 219);
-
-
-  align-items: center !important;
+.pagination{
 
   font-weight: bold !important;
+  
+  justify-content: center !important;
+
+  margin-right: 20px !important;
+  
 }
 
-
-#pagina ul.pagination li.page-item {
-  background-color: rgba(208, 205, 219, 1) !important;
-}
-
-#pagina ul.pagination li.page-item a.page-link {
-  background-color: rgba(208, 205, 219, 1) !important;
-}
