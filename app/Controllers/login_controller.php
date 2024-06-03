@@ -58,7 +58,7 @@ public function authenticate() {
             return redirect()->to('/login');
         }
     } else {
-        $session->setFlashdata('mailIncorrecto', 'Correo no registrado, vuelva a intentarlo o regístrese');
+        $session->setFlashdata('mailIncorrecto', 'Usuario no registrado, vuelva a intentarlo o regístrese');
         return redirect()->to('/login');
     }
 }

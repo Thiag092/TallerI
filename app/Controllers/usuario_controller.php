@@ -22,58 +22,79 @@ class usuario_controller extends Controller{
     }
  
     public function formValidation() {
-             //validate es una funcion de codeigniter se usa para validar los datos del formulario de mi registro de usuario
-             //antes de seguir con cualquier logica
+      $input = $this->validate([
+          'nombre' => [
+              'label' => 'nombre',
+              'rules' => 'required|min_length[3]|max_length[50]',
+              'errors' => [
+                  'required' => 'El {field} es obligatorio.',
+                  'min_length' => 'El {field} debe tener al menos {param} caracteres.',
+                  'max_length' => 'El {field} no puede exceder de {param} caracteres.',
+              ]
+          ],
+          'apellido' => [
+              'label' => 'apellido',
+              'rules' => 'required|min_length[3]|max_length[50]',
+              'errors' => [
+                  'required' => 'El {field} es obligatorio.',
+                  'min_length' => 'El {field} debe tener al menos {param} caracteres.',
+                  'max_length' => 'El {field} no puede exceder de {param} caracteres.',
+              ]
+          ],
+          'nombre_usuario' => [
+              'label' => 'nombre de usuario',
+              'rules' => 'required|min_length[3]|max_length[50]|is_unique[usuario.nombre_usuario]',
+              'errors' => [
+                  'required' => 'El {field} es obligatorio.',
+                  'min_length' => 'El {field} debe tener al menos {param} caracteres.',
+                  'max_length' => 'El {field} no puede exceder de {param} caracteres.',
+                  'is_unique' => 'El {field} ya está en uso.',
+              ]
+          ],
+          'email' => [
+              'label' => 'correo electrónico',
+              'rules' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuario.email]',
+              'errors' => [
+                  'required' => 'El {field} es obligatorio.',
+                  'min_length' => 'El {field} debe tener al menos {param} caracteres.',
+                  'max_length' => 'El {field} no puede exceder de {param} caracteres.',
+                  'valid_email' => 'El {field} debe contener un correo electrónico válido.',
+                  'is_unique' => 'El {field} ya está registrado.',
+              ]
+          ],
+          'pass' => [
+              'label' => 'contraseña',
+              'rules' => 'required|min_length[5]|max_length[20]',
+              'errors' => [
+                  'required' => 'La {field} es obligatoria.',
+                  'min_length' => 'La {field} debe tener al menos {param} caracteres.',
+                  'max_length' => 'La {field} no puede exceder de {param} caracteres.',
+              ]
+          ],
+      ]);
 
-             //aca validate recibe un array de valores con sus respectivas reglas de validacion cada uno(extension por ej)
-        $input = $this->validate([
-            'nombre'   => 'required|min_length[3]|max_length[50]',
-            'apellido' => 'required|min_length[3]|max_length[50]',
-            'nombre_usuario'  => 'required|min_length[3]|max_length[50]|is_unique[usuario.nombre_usuario]',
-            'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuario.email]', //campo unico en la tabla 'usuario' campo 'email'
-            'pass'     => 'required|min_length[5]|max_length[20]'
-        ],);
-        //si al final de las validaciones, todos cumplen con las establecidas, validae retorna "true", y asigna dicho valor a "$input"
-        //caso contrario, retorna "false", dando dicho valor a "$input"
-        //-------------------------------------------------------------------------
+      $perfilIdCliente = $this->getPerfilIdCliente();
+      $formModel = new Usuario_model();
 
-        // Obtener el ID del perfil "Cliente"
-        $perfilIdCliente = $this->getPerfilIdCliente();
-
-        $formModel = new usuario_model(); //crea una instancia del modelo
-
-
-        //--------------------------------------------------------------------------------------------------
-        //Aca es donde se ve lo que ocurre, dependiendo de que valor tiene "$input", si "true" o "false"
-
-        if (!$input) { //si la validacion no es exitosa (o sea $input=false)
-            $data['titulo'] = 'Registrate - GlaxyGuitars';
-            echo view('Plantillas/encabezado', $data);
-            echo view('Plantillas/registro', ['validation' => $this->validator]);
-            echo view('Plantillas/footer');
-
-        } else { //si la validacion es exitosa ($input=true)
-            //guarda los datos en la BD
-            $formModel->save([
-                'nombre' => $this->request->getVar('nombre'),
-                'apellido'=> $this->request->getVar('apellido'),
-                'nombre_usuario'=> $this->request->getVar('nombre_usuario'),
-                'email'=> $this->request->getVar('email'),
-                'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
-                //password_hash() crea un nuevo hash de contraseña usando un algoritmo de hash de único sentido. (contraseña encriptada)
-                'perfil_id' => $perfilIdCliente
-                // 'baja' => 0 // El usuario no está dado de baja inicialmente, (controlar si esta linea debe incluirse)
-            ]);  
-             
-            // Flashdata almacena datos en la sesión que solo persisten durante la siguiente solicitud
-            // Establecer un mensaje de éxito utilizando Flashdata
-               session()->setFlashdata('success', 'Usuario registrado con exito! Ahora por favor, inicia sesión.-');
-                return redirect()->to('/login'); //Redirige al usuario a la página de registro
-
-              // return $this->response->redirect('/registro');
-      
-        }
-    }
+      if (!$input) {
+          $data['titulo'] = 'Registrate - GalaxyGuitars';
+          echo view('Plantillas/encabezado', $data);
+          echo view('Plantillas/registro', ['validation' => $this->validator]);
+          echo view('Plantillas/footer');
+      } else {
+          $formModel->save([
+              'nombre' => $this->request->getVar('nombre'),
+              'apellido'=> $this->request->getVar('apellido'),
+              'nombre_usuario'=> $this->request->getVar('nombre_usuario'),
+              'email'=> $this->request->getVar('email'),
+              'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
+              'perfil_id' => $perfilIdCliente
+          ]);  
+           
+          session()->setFlashdata('success', 'Usuario registrado con exito! Ahora por favor, inicia sesión.-');
+          return redirect()->to('/login');
+      }
+  }
 
 
 //aca entra cuando voy al CRUD USUARIOS en la barra de navegacion-----------------------------------------
