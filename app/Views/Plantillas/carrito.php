@@ -123,8 +123,8 @@
                             <!-- Submit boton. Actualiza los datos en el carrito -->
                             <!--input type="submit" class ='btn btn-primary btn-lg' value="Actualizar"-->
                             <!-- " Confirmar orden envia a carrito_controller/muestra_compra  -->
-                            <a class="btn btn-primary btn-lg" href="<?php echo base_url('finalizar_compra')?>">
-                                Comprar
+                            <a class="btn btn-success btn-lg" href="<?php echo base_url('finalizar_compra')?>">
+                                COMPRAR
                             </a>
                             <!--<input type="button" class='btn btn-primary btn-lg' value="Comprar"
                                 onclick="window.location = 'carrito-comprar'">-->
