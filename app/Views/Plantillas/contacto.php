@@ -51,28 +51,28 @@
         <form class="row g-3 needs-validation" action="<?= base_url('enviar_consulta') ?>" method="post" novalidate>
           <div class="col-md-6">
             <label for="inputName" class="form-label" style="font-weight: bold;">Nombre completo:</label>
-            <input type="text" name="nombre" class="form-control" id="inputName" required>
+            <input type="text" name="nombre" class="form-control" id="inputName" placeholder="Ej: Juen Gomez" required>
             <div class="invalid-feedback">
               Por favor, ingresa tu nombre completo.
             </div>
           </div>
           <div class="col-md-6">
             <label for="inputEmail" class="form-label" style="font-weight: bold;">Correo:</label>
-            <input type="email" name="email" class="form-control" id="inputEmail" required>
+            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="correo@ejemplo.com" required>
             <div class="invalid-feedback">
               Por favor, ingresa un correo electrónico válido (Ej. tuMail@gmail.com).
             </div>
           </div>
           <div class="col-6">
             <label for="inputSubject" class="form-label" style="font-weight: bold;">Asunto:</label>
-            <input type="text" name="asunto" class="form-control" id="inputSubject" required>
+            <input type="text" name="asunto" class="form-control" id="inputSubject" placeholder="Ej: Guitarra a pedido." required>
             <div class="invalid-feedback">
               Por favor, ingresa el asunto de tu mensaje.
             </div>
           </div>
           <div class="col-6">
             <label for="inputPhone" class="form-label" style="font-weight: bold;">Teléfono:</label>
-            <input type="text" name="tel" class="form-control" id="inputPhone" required>
+            <input type="text" name="tel" class="form-control" id="inputPhone"  placeholder="Sólo valores numéricos" required>
             <div class="invalid-feedback">
               Este campo debe ser completado.
             </div>

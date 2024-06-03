@@ -16,11 +16,50 @@ class consulta_controller extends Controller
         $validation = \Config\Services::validation();
 
         $input = $this->validate([
-            'nombre' => 'required|min_length[3]',
-            'email' => 'required|valid_email',
-            'asunto' => 'required|min_length[3]|max_length[100]', // Añadir asunto en la validación
-            'tel' => 'required|min_length[3]|max_length[15]',
-            'mensaje' => 'required|min_length[3]|max_length[256]',
+            'nombre' => [
+                'label' => 'nombre',
+                'rules' => 'required|min_length[3]',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'min_length' => 'El {field} debe tener al menos {param} caracteres.'
+                ]
+            ],
+            'email' => [
+                'label' => 'correo electrónico',
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'valid_email' => 'El {field} debe contener un correo electrónico válido.'
+                ]
+            ],
+            'asunto' => [
+                'label' => 'asunto',
+                'rules' => 'required|min_length[3]|max_length[100]',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'min_length' => 'El {field} debe tener al menos {param} caracteres.',
+                    'max_length' => 'El {field} no puede exceder de {param} caracteres.'
+                ]
+            ],
+            'tel' => [
+                'label' => 'teléfono',
+                'rules' => 'required|min_length[3]|max_length[15]|numeric',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'min_length' => 'El {field} debe tener al menos {param} caracteres.',
+                    'max_length' => 'El {field} no puede exceder de {param} caracteres.',
+                    'numeric' => 'El {field} debe contener solo números.'
+                ]
+            ],
+            'mensaje' => [
+                'label' => 'mensaje',
+                'rules' => 'required|min_length[3]|max_length[256]',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'min_length' => 'El {field} debe tener al menos {param} caracteres.',
+                    'max_length' => 'El {field} no puede exceder de {param} caracteres.'
+                ]
+            ],
         ]);
 
         $formModel = new consulta_model();
@@ -30,6 +69,9 @@ class consulta_controller extends Controller
             echo view('Plantillas/encabezado', $data);
             echo view('Plantillas/contacto', ['validation' => $this->validator]);
             echo view('Plantillas/footer');
+
+            session()->setFlashdata('success', 'Hubo un error, por favor vuelva a intentarlo');
+            return $this->response->redirect(base_url('/contacto')); // Ajustar redirección si es necesario
         } else {
             $formModel->save([
                 'nombre' => $this->request->getVar('nombre'),
