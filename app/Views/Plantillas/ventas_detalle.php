@@ -9,7 +9,7 @@
             Volver
         </a>
         <div class="text-center p-4">
-        <h2>Detalles de la venta</h2>
+        <h2>DETALLES DE VENTAS</h2>
     </div>
         </div>
         
@@ -49,9 +49,9 @@
                                             <td><?php echo $producto['nombre_prod'] ?></td>
                                         <?php endif ?>
                                     <?php endforeach ?>
-                                        <td><?php echo $item['cantidad'] ?></td>
-                                        <td><?php echo $item['precio'] ?></td>
-                                        <td><?php echo $item['cantidad']  * $item['precio']?></td>
+                                        <td><?php echo  $item['cantidad'] ?></td>
+                                        <td><?php echo "$" . $item['precio'] ?></td>
+                                        <td><?php echo "$" . $item['cantidad']  * $item['precio']?></td>
                                 </tr>
                             <?php endif ?>
                         <?php endforeach ?>
@@ -62,7 +62,7 @@
                     <tfoot>
                         <tr>
                             <td colspan="3" class="text-end">Total:</td>
-                            <td><?php echo $total ?></td>
+                            <td><?php echo "$" . $total ?></td>
                         </tr>
                     </tfoot>
                 </table>

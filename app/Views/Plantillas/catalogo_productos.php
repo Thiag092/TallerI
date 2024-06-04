@@ -1,14 +1,14 @@
 <div class="container-fluid d-flex justify-content-center">
-    <div class="">
+    <div class=" mt-2">
     
         <div class="card bg-white mt-2">
-            <div class="card-body">
+            <div class="card-body mt-2">
                 <h2 class="text-center">Nuestros productos pensados para ustedes...</h2>
             </div>
         </div>
 
         <?php if (session()->getFlashdata('success')) { ?>
-            <div class="mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible">
+            <div class="mt-3 mb-3 ms-3 me-3 h2 text-center alert alert-success alert-dismissible">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <?= session()->getFlashdata('success') ?>
             </div>
@@ -19,7 +19,7 @@
         <div class="row">
             <?php if(!empty($productos)): ?>
                 <?php foreach($productos as $producto ):?>
-                    <div class="col-xs-12 col-m-6 col-lg-4 p-2">
+                    <div class="col-xs-12 col-m-6 col-lg-4 p-2 mt-4">
                         <form action="<?= base_url('carrito_agregar/'.$producto['id_producto']);?>" method="post">
                             <div class="card h-100">
                                 <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" class="card-img-top img-fluid" style="height: 400px; object-fit: cover;">

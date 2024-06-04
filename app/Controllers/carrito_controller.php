@@ -279,7 +279,7 @@ $correo_usuario = $session->get('email');//-------------------------------------
         $data['cabecera_id'] = $cabecera_id;
         
         echo view('Plantillas/encabezado', $data);
-        session()->setFlashdata('success', 'Compra realizada con exito!');
+        session()->setFlashdata('success', 'Compra realizada con exito! GRACIAS!');
         echo view('Plantillas/compra_finalizada', $data);
         echo view('Plantillas/footer', $data);
 	

@@ -1,7 +1,6 @@
 <div class="container-fluid p-4">
-    
     <div class="text-center">
-        <h2 class="">Crear nueva categoria</h2>
+        <h2 class="">CREAR CATEGORIA NUEVA</h2>
     </div>
 
     <!-- Validación -->
@@ -18,28 +17,31 @@
     <?php $validation = \Config\Services::validation(); ?>
 
     <div class="d-flex justify-content-center mt-4">
-        <form method="post" action="<?php echo base_url('enviar_categoria');?>" enctype="multipart/form-data">
-            <div class="row g-3 p-4">
-                <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre de la categoría</label>
-                    <input required name="categoria" type="text" class="form-control" placeholder="Ej: Jackson">
-                    <!-- Error -->
-                    <?php if ($validation->getError('categoria')): ?>
-                        <div class='alert alert-danger mt-2'>
-                            <?= $validation->getError('categoria'); ?>
+        <!-- Nuevo contenedor con fondo blanco usando clases de Bootstrap -->
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="<?php echo base_url('enviar_categoria');?>" enctype="multipart/form-data">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">Nombre de la categoría</label>
+                            <input required name="categoria" type="text" class="form-control" placeholder="Ej: Jackson">
+                            <!-- Error -->
+                            <?php if ($validation->getError('categoria')): ?>
+                                <div class='alert alert-danger mt-2'>
+                                    <?= $validation->getError('categoria'); ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
-                    <?php endif; ?>
-                </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+                </form>
             </div>
-            <div class="text-center row-12">
-                <button class="w-25 btn btn-danger btn-sm" type="reset">Reiniciar</button>
-                <button class="w-25 btn btn-primary btn-sm" type="submit">Guardar</button>
-            </div>
-        </form>
-        
+        </div>
     </div>
-    <div class="text-center p-2">
-    <a class="btn btn-primary" href="<?php echo base_url('/crud_categorias') ?>"><h5>Volver</h5></a>
+    
+    <div class="text-center mt-3">
+        <a class="btn btn-primary" href="<?php echo base_url('/crud_categorias') ?>"><h5>Volver</h5></a>
     </div>
-
 </div>

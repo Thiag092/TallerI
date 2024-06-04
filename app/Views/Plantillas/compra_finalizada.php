@@ -1,12 +1,12 @@
 <div class="container-fluid">
     <div class="text-center p-4">
     <?php if (session()->getFlashdata('success')) { ?>
-            <div class="mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible">
+            <div class="mt-3 mb-3 ms-3 me-3 h2 text-center alert alert-success alert-dismissible">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <?= session()->getFlashdata('success') ?>
             </div>
         <?php } ?>
-        <h1>¡Gracias por su compra, esperamos tu regreso pronto!</h1>
+        
     </div>
     <div class="row">
         <div class="col-md-6 offset-md-3 card p-4">
@@ -43,8 +43,8 @@
                                 <?php endforeach ?>
                             
                             <td><?php echo $item['cantidad'] ?></td>
-                            <td><?php echo $item['precio'] ?></td>
-                            <td><?php echo $item['cantidad']  * $item['precio']?></td>
+                            <td><?php echo "$" . $item['precio'] ?></td>
+                            <td><?php echo "$" . $item['cantidad']  * $item['precio']?></td>
                         </tr>
                         <?php endforeach ?>
                         
@@ -53,7 +53,7 @@
                     <tfoot>
                         <tr>
                             <td colspan="3" class="text-end">Total:</td>
-                            <td><?php echo $total ?></td>
+                            <td><?php echo "$" . $total ?></td>
                         </tr>
                     </tfoot>
                 </table>

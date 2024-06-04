@@ -72,7 +72,7 @@
           </div>
           <div class="col-6">
             <label for="inputPhone" class="form-label" style="font-weight: bold;">Teléfono:</label>
-            <input type="text" name="tel" class="form-control" id="inputPhone"  placeholder="Sólo valores numéricos" required>
+            <input type="number" name="tel" class="form-control" id="inputPhone"  placeholder="Sólo valores numéricos" required>
             <div class="invalid-feedback">
               Este campo debe ser completado.
             </div>

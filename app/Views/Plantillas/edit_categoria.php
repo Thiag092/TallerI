@@ -1,14 +1,8 @@
 
 <div class="container-fluid p-4 ">
 
-    <a class="btn btn-primary" href="<?php echo base_url('/crud_categorias') ?>"><h5>Volver</h5></a>
-    <div class="text-center">
-        <h4 class="">Editar Categoría</h4>
-    </div>
-    
-
-    <!-- Validación -->
-    <div>
+<!-- Validación -->
+<div>
         <!--recuperamos datos con la función Flashdata para mostrarlos-->
         <?= csrf_field(); ?>
 
@@ -21,6 +15,14 @@
     </div>
 
     <?php $validation = \Config\Services::validation(); ?>
+
+    <a class="btn btn-primary" href="<?php echo base_url('/crud_categorias') ?>"><h5>Volver</h5></a>
+    <div class="text-center">
+        <h2 class="">EDICIÓN DE CATEGORÍA</h2>
+    </div>
+    
+
+    
     
     
 
@@ -31,7 +33,7 @@
             <div class="row g-3 p-4 ">
 
                 <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre de la categoría</label>
+                    <label for="exampleFormControlInput1" class="form-label fw-bold">Nombre de la categoría</label>
                     <input required name="categoria" type="text" class="form-control" value="<?php echo $categoria['categoria'];?>" placeholder="Ej: Jaguar">
                     <!-- Error -->
                     
@@ -46,7 +48,6 @@
                 
             
             <div class="text-center row-12">
-                <button class="w-25 btn btn-danger btn-sm" type="reset">Reiniciar</button>
                 <button class="w-25 btn btn-primary btn-sm" type="submit">Guardar</button>
             </div>
 

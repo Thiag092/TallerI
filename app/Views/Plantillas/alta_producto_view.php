@@ -1,14 +1,5 @@
 <div class="container-fluid p-4">
-    <div class="card p-4 bg-white">
-        <div>
-            <a class="btn btn-primary" href="<?php echo base_url('/crud') ?>"><h5>Volver</h5></a>
-        </div>
-        <div class="text-center mb-4">
-            <h4>Altas de Productos</h4>
-        </div>
-
-        <!-- Validación -->
-        <div>
+<div>
             <!--recuperamos datos con la función Flashdata para mostrarlos-->
             <?= csrf_field(); ?>
 
@@ -21,6 +12,17 @@
         </div>
 
         <?php $validation = \Config\Services::validation(); ?>
+<div>
+            <a class="btn btn-primary" href="<?php echo base_url('/crud') ?>"><h5>Volver</h5></a>
+        </div>
+       
+    <div class="card p-4 bg-white">
+        
+    <div class="text-center mb-4">
+            <h2>ALTAS DE PRODUCTOS</h2>
+        </div>
+        <!-- Validación -->
+     
 
         <div class="d-flex justify-content-center">
             <!-- Inicio del formulario -->
