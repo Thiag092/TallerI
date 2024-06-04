@@ -103,24 +103,22 @@ public function alta_producto()
 }
 
 public function editarProducto($id = null) {
-    /**Si tiene un nombre quiere decir que se debe agregar la regla para la imagen también */
-     helper(['url', 'form', 'html']);
+    helper(['url', 'form', 'html']);
 
-        $rules = [
+    $rules = [
         'nombre-prod' => [
             'rules'  => 'required|min_length[3]',
             'errors' => [
                 'required' => 'A {field} debes colocar una descripción de al menos 3 letras.',
             ],
         ],
-
         'precio'=> [
             'rules'  => 'required',
             'errors' => [
                 'required' => 'A {field} debes colocar un precio.',
             ],
         ],
-        'precio-venta'       => [
+        'precio-venta' => [
             'rules'  => 'required',
             'errors' => [
                 'required' => 'A {field} debes colocar un precio de venta.',
@@ -132,129 +130,69 @@ public function editarProducto($id = null) {
                 'required' => 'A {field} debes colocar el stock.',
             ],
         ],
-        'stock-min' =>
-        [
+        'stock-min' => [
             'rules'  => 'required',
             'errors' => [
                 'required' => 'A {field} debes colocar el stock mínimo.',
             ],
         ],
-
     ];
 
-
-    /*Error de validación de codeIgniter Visto por el profesor Ivan Sambrana
-        https://forum.codeigniter.com/showthread.php?tid=86535&page=2
-        image/gif, image/png, image/jpeg
-        mime_in[field_name,image/png,image/jpeg]
-        'imagen' => [
-            'rules'  => 'is_image[imagen]',
-            'errors' => [
-                'required' => 'A {field} debes subir una imagen.',
-                'is_image[imagen]' => 'A {field} debe ser una imagen.',
-            ]
-        ],
-        */
-
-   if (!($this->request->getFile('imagen')->getName() === "")) { 
+    // Comprobamos si se subió una nueva imagen
+    if (!($this->request->getFile('imagen')->getName() === "")) {
         $rules['imagen'] = [
-            'rules' => 'required|mime_in[imagen, image/gif,image/png,image/jpeg]',
+            'rules' => 'mime_in[imagen,image/gif,image/png,image/jpeg]',
             'errors' => [
-                'required' => 'A {field} debes subir una imagen.',
+                'mime_in' => 'A {field} debes subir una imagen válida.',
             ],
         ];
     }
 
     $producto = new producto_model();
-    //var_dump($rules);
-    $this->validate($rules);
 
-    //exit();
     if ($this->validate($rules)) {
-
-        //Si no se subió una imagen se asume que no actualizara imagen
-
-
-        if (!($this->request->getFile('imagen')->getName() === "")) {      
-            //var_dump($rules);
-            //exit();       
-            //se está verificando si se ha cargado una nueva imagen para el producto. Si se ha cargado una nueva imagen 
-            //(es decir, el nombre del archivo no está vacío), entonces se procede a manejar la actualización de la imagen
-            // en el primer bloque, se actualizan explícitamente todos los campos, mientras que en el segundo bloque, 
-            //se actualizan los campos sin hacer ninguna distinción.
-
-
+        if (!($this->request->getFile('imagen')->getName() === "")) {
             $img = $this->request->getFile('imagen');
             $nombre_aleatorio = $img->getRandomName();
-            $img->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
+            $img->move(ROOTPATH . 'assets/uploads', $nombre_aleatorio);
 
             $data = [
                 'nombre_prod' => $this->request->getVar('nombre-prod'),
-                'imagen' => $img->getName(),
-                'categoria_id' => $this->request->getVar('categoria_id'),
+                'imagen' => $nombre_aleatorio,
+                'categoria_id' => $this->request->getVar('cod_categoria'),
                 'precio' => $this->request->getVar('precio'),
                 'precio_vta' => $this->request->getVar('precio-venta'),
                 'stock' => $this->request->getVar('stock'),
                 'stock_min' => $this->request->getVar('stock-min'),
-                //'eliminado' => NO
             ];
-
-            $producto->update($id, $data);
-            session()->setFlashdata('success', 'Cambios guardados con ÉXITO!!');
-            return $this->response->redirect(site_url('/crud'));
-
         } else {
-            $data  = [
+            $data = [
                 'nombre_prod' => $this->request->getVar('nombre-prod'),
                 'categoria_id' => $this->request->getVar('cod_categoria'),
                 'precio' => $this->request->getVar('precio'),
                 'precio_vta' => $this->request->getVar('precio-venta'),
                 'stock' => $this->request->getVar('stock'),
                 'stock_min' => $this->request->getVar('stock-min'),
-                //'eliminado' => NO
             ];
-
-            $producto->update($id, $data);
-            session()->setFlashdata('success', 'Cambios guardados con ÉXITO!!');
-            return $this->response->redirect(site_url('/crud'));
-
         }
 
-
+        $producto->update($id, $data);
+        session()->setFlashdata('success', 'Cambios guardados con ÉXITO!!');
+        return $this->response->redirect(site_url('/crud'));
 
     } else {
-        /***Se muestran los errores */
-
-        //$producto = new Producto_model();
-        //$dato['validation'] = $this->validator;
         $data['old'] = $producto->where('id_producto', $id)->first();
-        $categoriaModel = new Categoria_model();
-        //$data['categorias'] = $categoriaModel->orderBy('id_categoria', 'DESC')->findAll();
+        $categoriaModel = new categoria_model();
+        $data['categorias'] = $categoriaModel->orderBy('id', 'DESC')->findAll();
         $data['categoria_producto'] = $categoriaModel->where('id', $data['old']['categoria_id'])->first();
-        //dd($data['categoria_producto']);
         $data['validation'] = $this->validator;
-        $data['categorias'] = $categoriaModel->orderBy('id_categoria', 'DESC')->findAll();
-        $data['categoria_producto'] = $categoriaModel->where('id', $data['old']['categoria_id'])->first();
-        $dato['titulo'] = 'Editar producto';
+        $data['titulo'] = 'Editar producto';
         echo view('Plantillas/encabezado', $data);
         echo view('Plantillas/edit_producto', $data);
         echo view('Plantillas/footer');
-        /*[
-            'validation' => $this->validator,
-            'old' => $producto->where('id_producto', $id)->first(),
-            'categorias' => $categoriaModel->orderBy('id_categoria', 'DESC')->findAll(),
-            'categoria_producto' => $categoriaModel->where('id_categoria', $data['old']['cod_categoria'])->first(),
-        ]*/
-
-
-        /*if ($this->request->getVar('imagen') == NULL) {
-            echo '<script language="javascript">alert("No se cargo la imagen");</script>'; # code...
-        }*/
     }
-
-
-
 }
+
 
 public function eliminarProducto($id = null) {
     $producto = new producto_model();

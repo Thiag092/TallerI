@@ -1,6 +1,7 @@
 <div class="container-fluid justify-content-center">
 
     <div class="text-center mt-4 mtb-4">
+    
         <div>
             <h2>Aquí divisarás los productos cargados a tu carrito.</h2>
         </div>
@@ -115,15 +116,17 @@
                             </b>
                         </td>
                         <td colspan="5">
+
+                        
                             <!-- Borrar carrito usa mensaje de confirmacion javascript implementado en head_view -->
                             <!--<input type="button" class='btn btn-danger btn-lg' value="Borrar Carrito" onclick="window.location = 'borrar'">-->
-                            <a class="btn btn-danger btn-lg" href="<?php echo base_url('eliminar_carrito')?>">
+                            <a class="btn btn-danger btn-ll" href="<?php echo base_url('eliminar_carrito')?>">
                                 Borrar Carrito
                             </a>
                             <!-- Submit boton. Actualiza los datos en el carrito -->
                             <!--input type="submit" class ='btn btn-primary btn-lg' value="Actualizar"-->
                             <!-- " Confirmar orden envia a carrito_controller/muestra_compra  -->
-                            <a class="btn btn-success btn-lg" href="<?php echo base_url('finalizar_compra')?>">
+                            <a class="btn btn-success btn-l" href="<?php echo base_url('finalizar_compra')?>">
                                 COMPRAR
                             </a>
                             <!--<input type="button" class='btn btn-primary btn-lg' value="Comprar"
@@ -137,6 +140,9 @@
 
 
         </table>
-
+        <a class="w-20 btn btn-primary btn-l" href="<?php echo base_url('catalogo') ?>">
+            Volver al catálogo
+        </a>
+        
     </div>
 </div>

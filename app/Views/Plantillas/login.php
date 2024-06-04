@@ -51,7 +51,7 @@
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Para comprar, inicia sesion.</p>
+                <p class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Para comprar, primero debe registrarse e iniciar sesión.</p>
 
                 <form class="mx-1 mx-md-4 needs-validation" action="<?php echo base_url('login'); ?>" method="post" novalidate>
   <div class="d-flex flex-row align-items-center mb-4">

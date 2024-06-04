@@ -1,3 +1,11 @@
+
+<?php if (session()->getFlashdata('success')) { ?>
+            <div class="mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <?= session()->getFlashdata('success') ?>
+            </div>
+        <?php } ?>
+
 <div class="container-fluid d-flex justify-content-center">
     <div class=" mt-2">
     
@@ -7,12 +15,7 @@
             </div>
         </div>
 
-        <?php if (session()->getFlashdata('success')) { ?>
-            <div class="mt-3 mb-3 ms-3 me-3 h2 text-center alert alert-success alert-dismissible">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <?= session()->getFlashdata('success') ?>
-            </div>
-        <?php } ?>
+        
 
         <div class="text-center p-2"></div>
         

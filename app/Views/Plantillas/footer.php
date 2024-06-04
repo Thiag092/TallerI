@@ -26,12 +26,12 @@
 
               <li>
               <a href="https://twitter.com/?lang=es" target="_blank">
-              <img class="iconosRedes" src="<?= base_url('assets/img/icono_twitter.png') ?>" alt="">
+              <img class="iconosRedes" src="<?= base_url('assets/img/icono_twitter.png') ?>" alt=""></a></li>
 
             <li>     
               <a href="https://instagram.com/?lang=es" target="_blank"> 
             
-              <img class="iconosRedes" src="<?= base_url('assets/img/icono_ig.png') ?>" alt="">
+              <img class="iconosRedes" src="<?= base_url('assets/img/icono_ig.png') ?>" alt=""></a></li>
 
             <li>
             <a href="https://youtube.com/?lang=es" target="_blank"> 
