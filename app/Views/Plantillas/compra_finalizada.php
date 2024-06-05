@@ -8,6 +8,11 @@
         <?php } ?>
         
     </div>
+    <div class="container-fluid text-center p-4">
+        <a class="btn btn-primary btn-block" href="<?php echo base_url('/') ?>">
+            Volver al inicio
+        </a>
+    </div>
     <div class="row">
         <div class="col-md-6 offset-md-3 card p-4">
             <h2 class="text-center">Factura</h2>
@@ -63,9 +68,5 @@
             
         </div>
     </div>
-    <div class="container-fluid text-center p-4">
-        <a class="btn btn-primary btn-block" href="<?php echo base_url('/') ?>">
-            Volver al inicio
-        </a>
-    </div>
+    
 </div>
