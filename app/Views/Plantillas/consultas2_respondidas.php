@@ -1,11 +1,11 @@
 <div class="container-fluid justify-content-center">
 
 <div class="text-center mt-4 mb-4">
-        <h2>Listado de contactos respondidos.</h2>
+        <h2>Listado de consultas de CLIENTES respondidas.</h2>
     </div>
     <div class="text-center p-2">
 
-        <button class="w-20 btn btn-primary btn-sm" onclick="location.href='<?php echo base_url('consultas_view'); ?>'">Volver a la contactos pendientes</button>
+        <button class="w-20 btn btn-primary btn-sm" onclick="location.href='<?php echo base_url('consultas2_view'); ?>'">Volver a CONSULTAS pendientes</button>
 
     </div>
 
@@ -31,27 +31,19 @@
             <thead>
                     <tr>
                     <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Número telefónico</th>
-                        <th scope="col">Mensaje</th>
+                        <th scope="col">Asunto</th>
+                        <th scope="col">Consulta</th>
                     </tr>
                     </thead>
                 <?php foreach ($consultas as $consulta): ?>
                     <tr>
                         <?php if ($consulta['respondido'] == "SI"): ?>
                             <td>
-                                <?= $consulta['id_mensaje'] ?>
-                            </td>
-                            <td>
-                                <?= $consulta['nombre'] ?>
+                                <?= $consulta['id_contacto'] ?>
                             </td>
                            
                             <td>
-                                <?= $consulta['email'] ?>
-                            </td>
-                            <td>
-                                <?= $consulta['tel'] ?>
+                                <?= $consulta['asunto'] ?>
                             </td>
                             <td>
                                 <?= $consulta['mensaje'] ?>

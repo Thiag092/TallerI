@@ -38,7 +38,13 @@ $routes->get('/terminos_y_usos', 'Home::terminos_y_usos');
 
 $routes->get('/contacto', 'Home::contacto');
 
+$routes->get('consulta2', 'Home::consulta2');
+
+
 $routes->get('/comercializacion', 'Home::comercializacion');
+
+
+
 
 
 /*
@@ -114,6 +120,27 @@ $routes->post('enviar_consulta', 'consulta_controller::formValidation');//No adm
 $routes->get('/responder_consulta/(:num)', 'consulta_controller::responderConsulta/$1', ['filter' => 'admin']);
 
 $routes->get('/restaurar_consulta/(:num)', 'consulta_controller::restaurarConsulta/$1', ['filter' => 'admin']);
+
+
+
+
+
+
+
+
+/**
+ * Rutas de la seccion "RESPONDER CONSULTAS 2222222222222222" de la barra de nav----------------------------------------------------------
+ */
+//la carga se encarga $routes->get('contacto', 'Home::f_contacto');
+
+$routes->get('consultas2_view', 'consulta2_controller::ver_consultas', ['filter' => 'admin']);
+$routes->get('ver_consultas2_respondidas', 'consulta2_controller::ver_consultas_respondidas', ['filter' => 'admin']);
+
+$routes->post('enviar_consulta2', 'consulta2_controller::formValidation');//No admin ni logueado
+
+$routes->get('/responder_consulta2/(:num)', 'consulta2_controller::responderConsulta/$1', ['filter' => 'admin']);
+
+$routes->get('/restaurar_consulta2/(:num)', 'consulta2_controller::restaurarConsulta/$1', ['filter' => 'admin']);
 
 
 

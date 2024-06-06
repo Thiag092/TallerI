@@ -15,10 +15,10 @@
 
 <div class="container-fluid justify-content-center">
     <div class="text-center mt-4 mb-4">
-        <h2>Listado de CONTACTOS pendientes.</h2>
+        <h2>Listado de consultas de CLIENTES pendientes.</h2>
     </div>
     <div class="text-center p-2">
-        <button class="w-25 btn btn-primary btn-sm" onclick="location.href='<?php echo base_url('ver_consultas_respondidas'); ?>'">Ver contactos respondidos</button>
+        <button class="w-25 btn btn-primary btn-sm" onclick="location.href='<?php echo base_url('ver_consultas2_respondidas'); ?>'">Ver consultas respondidas</button>
     </div>
 
 
@@ -28,10 +28,8 @@
             <thead>
                     <tr>
                     <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Número telefónico</th>
-                        <th scope="col">Mensaje</th>
+                        <th scope="col">Asunto</th>
+                        <th scope="col">Consulta</th>
                         <th scope="col">Responder</th>
                     </tr>
                     </thead>
@@ -39,13 +37,15 @@
                     <?php foreach ($consultas as $consulta): ?>
                         <?php if ($consulta['respondido'] == "NO"): ?>
                             <tr>
-                                <td><?= $consulta['id_mensaje'] ?></td>
-                                <td><?= $consulta['nombre'] ?></td>
-                                <td><?= $consulta['email'] ?></td>
-                                <td><?= $consulta['tel'] ?></td>
+                                <td><?= $consulta['id_contacto'] ?></td>
+
+                                <td><?= $consulta['asunto'] ?></td>
+
+                                
+                              
                                 <td><?= $consulta['mensaje'] ?></td>
                                 <td>
-                                    <a href="<?php echo base_url(); ?>responder_consulta/<?php echo $consulta['id_mensaje']; ?>" class="btn btn-success">
+                                    <a href="<?php echo base_url(); ?>responder_consulta2/<?php echo $consulta['id_contacto']; ?>" class="btn btn-success">
                                     <img class="img-fluid" src="<?= base_url('assets/img/reply.png') ?>" class="bi" width="24" height="24">
                                     </a>
                                 </td>
@@ -54,7 +54,7 @@
                     <?php endforeach; ?>
                 <?php else: ?>
                     <tr>
-                        <td colspan="6">No hay contactos pendientes.</td>
+                        <td colspan="6">No hay consultas pendientes.</td>
                     </tr>
                 <?php endif; ?>
             </table>

@@ -72,7 +72,7 @@ $perfil = $session->get('perfil_id');
                     <a class="nav-link" href="<?php echo base_url('comercializacion'); ?>">Comercializacion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Consultas</a>
+                    <a class="nav-link" href="<?php echo base_url('consulta2'); ?>">Consultas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
@@ -119,6 +119,11 @@ $perfil = $session->get('perfil_id');
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/consultas_view'); ?>">
+                        Ver Contacto
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('/consultas2_view'); ?>">
                         Ver Consultas
                     </a>
                 </li>

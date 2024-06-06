@@ -27,13 +27,17 @@
     <div class="text-center p-4">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped table-striped ml-3">
-                <tr>
-                    <td>ID</td>
-                    <td>Fecha</td>
-                    <td>Correo del cliente</td>
-                    <td>Total de la venta</td>
-                    <td>Detalles de venta</td>
-                </tr>
+            <tr>
+                    <th scope="col">ID</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Correo del cliente</th>
+                        <th scope="col">Total de la venta</th>
+                        <th scope="col">Detalles de laventa</th>
+                    </tr>
+
+
+
+                
                 <?php foreach ($v_ventas_cabecera as $venta_cabecera): ?>
                     <tr>
                             <td>

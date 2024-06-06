@@ -33,4 +33,10 @@ class Home extends BaseController
         return view('Plantillas/encabezado',$data).view('Plantillas/comercializacion').view('Plantillas/footer');
     }
 
+    public function consulta2()
+    {
+        $data['titulo']="consulta2";
+        return view('Plantillas/encabezado',$data).view('Plantillas/consulta2').view('Plantillas/footer');
+    }
+
 }

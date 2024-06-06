@@ -116,7 +116,9 @@
                             </b>
                         </td>
                         <td colspan="5">
-
+                        <a class="w-20 btn btn-primary btn-l" href="<?php echo base_url('catalogo') ?>">
+            Volver al catálogo
+        </a>
                         
                             <!-- Borrar carrito usa mensaje de confirmacion javascript implementado en head_view -->
                             <!--<input type="button" class='btn btn-danger btn-lg' value="Borrar Carrito" onclick="window.location = 'borrar'">-->
@@ -140,9 +142,7 @@
 
 
         </table>
-        <a class="w-20 btn btn-primary btn-l" href="<?php echo base_url('catalogo') ?>">
-            Volver al catálogo
-        </a>
+        
         
     </div>
 </div>

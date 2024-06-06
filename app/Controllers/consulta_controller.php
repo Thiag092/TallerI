@@ -82,7 +82,7 @@ class consulta_controller extends Controller
                 'respondido' => 'NO' // Establecer el valor por defecto para el campo respondido
             ]);
 
-            session()->setFlashdata('success', 'Consulta enviada con éxito, en breve te respondemos. ¡GRACIAS!');
+            session()->setFlashdata('success', 'Mensaje de contacto enviado con éxito, en breve te respondemos. ¡GRACIAS!');
             return $this->response->redirect(base_url('/contacto')); // Ajustar redirección si es necesario
         }
     }

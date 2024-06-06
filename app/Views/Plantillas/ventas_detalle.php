@@ -9,7 +9,7 @@
             Volver
         </a>
         <div class="text-center p-4">
-        <h2>DETALLES DE VENTAS</h2>
+        <h2>DETALLES DE LA VENTA</h2>
     </div>
         </div>
         
