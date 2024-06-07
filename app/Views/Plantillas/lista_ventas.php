@@ -51,7 +51,7 @@
                             </td>
                            
                             <td>
-                                <?= $venta_cabecera['total_ventas'] ?>
+                            <?= '$' . $venta_cabecera['total_ventas'] ?>
                             </td>
                             <td>
                                 <a href="<?php echo base_url(); ?>ver_venta_detalle/<?php echo $venta_cabecera['id_ventas_cabecera']; ?>"

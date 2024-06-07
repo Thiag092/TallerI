@@ -2,7 +2,7 @@
     <div class="p-4">
         <h2 class="text-center">Productos dados de baja.</h2>
         <div class="text-center p-2">
-            <button class="w-20 btn btn-primary btn-sm" onclick="location.href='<?= base_url('crud'); ?>'">Volver al Menú Anterior</button>
+            <button class="w-20 btn btn-primary btn-sm" onclick="location.href='<?= base_url('crud'); ?>'">Volver a CRUD productos</button>
         </div>
         <div class="table-responsive">
             <table class="table table-striped">

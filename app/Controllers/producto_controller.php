@@ -109,7 +109,7 @@ public function editarProducto($id = null) {
         'nombre-prod' => [
             'rules'  => 'required|min_length[3]',
             'errors' => [
-                'required' => 'A {field} debes colocar una descripción de al menos 3 letras.',
+                'required' => 'Debes colocar una descripción de al menos 3 letras. Intenta nuevamente',
             ],
         ],
         'precio'=> [

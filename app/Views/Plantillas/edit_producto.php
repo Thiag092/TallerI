@@ -1,7 +1,7 @@
 <div class="container-fluid p-4">
     <a class="btn btn-primary" href="<?php echo base_url('/crud') ?>"><h5>Volver</h5></a>
     <div class="text-center">
-        <h4 class="">Editar Producto</h4>
+        <h2 class="">Edicion de Producto</h2>
     </div>
 
     <!-- Validación -->
@@ -110,7 +110,7 @@
             </div>
 
             <div class="text-center row-12">
-                <button class="w-25 btn btn-danger btn-sm" type="reset">Reiniciar</button>
+                
                 <button class="w-25 btn btn-primary btn-sm" type="submit">Guardar</button>
             </div>
         </form>
