@@ -6,5 +6,5 @@ class consulta2_model extends Model
 {
     protected $table = 'contacto';
     protected $primaryKey = 'id_contacto';
-    protected $allowedFields = ['asunto', 'mensaje', 'respondido'];
+    protected $allowedFields = ['nombre','apellido', 'email','asunto', 'mensaje', 'respondido'];
 }

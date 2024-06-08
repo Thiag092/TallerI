@@ -39,6 +39,9 @@ class carrito_controller extends Controller {
         return redirect()->back()->withInput();
 
     }
+
+
+    
     public function sumar_carrito($id = null){
         $cart = \Config\Services::cart();
         $producto = new producto_model();

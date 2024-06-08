@@ -14,7 +14,7 @@ class consulta2_controller extends Controller
     public function formValidation() 
     {
         $validation = \Config\Services::validation();
-
+    
         $rules = [
             'asunto' => [
                 'label' => 'Asunto',
@@ -35,7 +35,7 @@ class consulta2_controller extends Controller
                 ]
             ]
         ];
-
+    
         if (!$this->validate($rules)) {
             $data['titulo'] = 'Error en consulta';
             session()->setFlashdata('error', 'Hubo un error, por favor vuelva a intentarlo');
@@ -43,15 +43,20 @@ class consulta2_controller extends Controller
         } else {
             $formModel = new consulta2_model();
             $formModel->save([
+                'nombre' => session()->get('nombre'),
+                'apellido' => session()->get('apellido'),
+                'email' => session()->get('email'),
+                'user' => session()->get('user'),
                 'asunto' => $this->request->getVar('asunto'),
                 'mensaje' => $this->request->getVar('mensaje'),
                 'respondido' => 'NO'
             ]);
-
+    
             session()->setFlashdata('success', 'Consulta enviada con éxito, en breve te respondemos. ¡GRACIAS!');
             return redirect()->to('/consulta2');
         }
     }
+    
 
     // Resto del controlador permanece igual...
 

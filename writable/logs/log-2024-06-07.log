@@ -1,0 +1,90 @@
+ERROR - 2024-06-07 23:21:56 --> mysqli_sql_exception: Column 'user' cannot be null in C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\proyecto_ayala_yago\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_ayala_yago\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_ayala_yago\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\proyecto_ayala_yago\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\proyecto_ayala_yago\app\Controllers\consulta2_controller.php(51): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(934): App\Controllers\consulta2_controller->formValidation()
+#10 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta2_controller))
+#11 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\proyecto_ayala_yago\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-06-07 23:21:56 --> Column 'user' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacto` (`nombre`, `email`, `user`, `asunto`, `mensaje`, `respondido`) VALUES (:nombre:, :email:, :user:, :asunto:, :mensaje:, :respondido:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\consulta2_controller.php(51): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\consulta2_controller->formValidation()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta2_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-07 23:28:30 --> mysqli_sql_exception: Column 'user' cannot be null in C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\proyecto_ayala_yago\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_ayala_yago\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_ayala_yago\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\proyecto_ayala_yago\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\proyecto_ayala_yago\app\Controllers\consulta2_controller.php(51): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(934): App\Controllers\consulta2_controller->formValidation()
+#10 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta2_controller))
+#11 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\proyecto_ayala_yago\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-06-07 23:28:30 --> Column 'user' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacto` (`nombre`, `email`, `user`, `asunto`, `mensaje`, `respondido`) VALUES (:nombre:, :email:, :user:, :asunto:, :mensaje:, :respondido:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\consulta2_controller.php(51): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\consulta2_controller->formValidation()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta2_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-07 23:30:30 --> mysqli_sql_exception: Column 'nombre' cannot be null in C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\proyecto_ayala_yago\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\proyecto_ayala_yago\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_ayala_yago\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_ayala_yago\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\proyecto_ayala_yago\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\proyecto_ayala_yago\app\Controllers\consulta2_controller.php(58): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(934): App\Controllers\consulta2_controller->formValidation()
+#10 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta2_controller))
+#11 C:\xampp\htdocs\proyecto_ayala_yago\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\proyecto_ayala_yago\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-06-07 23:30:30 --> Column 'nombre' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacto` (`nombre`, `email`, `asunto`, `mensaje`, `respondido`) VALUES (:nombre:, :email:, :asunto:, :mensaje:, :respondido:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\consulta2_controller.php(58): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\consulta2_controller->formValidation()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta2_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-07 23:51:30 --> An invalid name was submitted as the product name: Firebird B&W The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-07 23:51:43 --> An invalid name was submitted as the product name: Firebird B&W The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-07 23:52:56 --> An invalid name was submitted as the product name: Firebird B&W The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-07 23:54:19 --> An invalid name was submitted as the product name: Firebird B&W The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-07 23:56:39 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-07 23:57:19 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces

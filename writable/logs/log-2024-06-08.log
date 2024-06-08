@@ -1,0 +1,32 @@
+ERROR - 2024-06-08 00:00:39 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:04:15 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:07:07 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:07:20 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:07:30 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:07:59 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+CRITICAL - 2024-06-08 00:09:34 --> syntax error, unexpected '{', expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Controllers\carrito_controller.php on line 21.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\carrito_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\carrito_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\carrito_controller')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\carrito_controller')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\carrito_controller', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 00:09:43 --> syntax error, unexpected '{', expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Controllers\carrito_controller.php on line 21.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\carrito_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\carrito_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\carrito_controller')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\carrito_controller')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\carrito_controller', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-08 00:11:34 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:11:45 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:12:24 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:12:33 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:12:55 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-08 00:13:28 --> An invalid name was submitted as the product name: Firebid Sunburst 90' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces

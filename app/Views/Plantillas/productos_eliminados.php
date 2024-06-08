@@ -13,7 +13,7 @@
                         <th scope="col">Precio de Venta</th>
                        
                         
-                        <th scope="col">Restaurar?</th>
+                  <!--      <th scope="col">Restaurar?</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -24,11 +24,11 @@
                                 <td>$<?= $producto['precio'] ?></td>
                                 <td>$<?= $producto['precio_vta'] ?></td>
                                
-                                <td>
+                             <!--   <td>
                                     <a href="<?= base_url();?>produ-restaurar/<?= $producto['id_producto'];?>" class="btn btn-success">
                                     <img class="img-fluid" src="<?= base_url('assets/img/back.png') ?>" class="bi" width="24" height="24">
                                     </a>
-                                </td>
+                                </td> -->
                             </tr>
                         <?php endif; ?>                
                     <?php endforeach; ?>

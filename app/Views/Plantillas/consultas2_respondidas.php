@@ -31,6 +31,9 @@
             <thead>
                     <tr>
                     <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Asunto</th>
                         <th scope="col">Consulta</th>
                     </tr>
@@ -38,16 +41,13 @@
                 <?php foreach ($consultas as $consulta): ?>
                     <tr>
                         <?php if ($consulta['respondido'] == "SI"): ?>
-                            <td>
-                                <?= $consulta['id_contacto'] ?>
-                            </td>
-                           
-                            <td>
-                                <?= $consulta['asunto'] ?>
-                            </td>
-                            <td>
-                                <?= $consulta['mensaje'] ?>
-                            </td>
+                            <td><?= $consulta['id_contacto'] ?></td>
+                                <td><?= $consulta['nombre'] ?></td>
+                                <td><?= $consulta['apellido'] ?></td>
+                                <td><?= $consulta['email'] ?></td>
+                                <td><?= $consulta['asunto'] ?></td>
+                                <td><?= $consulta['mensaje'] ?></td>
+                                
                             
                             
                         <?php endif ?>
