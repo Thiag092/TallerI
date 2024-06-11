@@ -19,9 +19,7 @@
 $session = session();
 $nombre = $session->get('nombre');
 $perfil = $session->get('perfil_id');
-//var_dump($perfil);
-//var_dump($session);
-//exit();
+$uri = service('uri');
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -38,61 +36,55 @@ $perfil = $session->get('perfil_id');
             <!-- Navbar para usuarios no autenticados -->
             <?php if (!$perfil) : ?>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('principal'); ?>">Principal</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'principal') ? 'active' : '' ?>" aria-current="page" href="<?php echo base_url('principal'); ?>">Principal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('quienes_somos'); ?>">Quienes somos</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'quienes_somos') ? 'active' : '' ?>" href="<?php echo base_url('quienes_somos'); ?>">Quienes somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('comercializacion'); ?>">Comercializacion</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'comercializacion') ? 'active' : '' ?>" href="<?php echo base_url('comercializacion'); ?>">Comercializacion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Contacto</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'contacto') ? 'active' : '' ?>" href="<?php echo base_url('contacto'); ?>">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'terminos_y_usos') ? 'active' : '' ?>" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('catalogo'); ?>">Nuestro catálogo</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'catalogo') ? 'active' : '' ?>" href="<?php echo base_url('catalogo'); ?>">Nuestro catálogo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('login'); ?>">Ingreso</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'login') ? 'active' : '' ?>" href="<?php echo base_url('login'); ?>">Ingreso</a>
                 </li>
             <?php endif; ?>
 
             <!-- Navbar para clientes -->
             <?php if ($perfil == "2") : ?>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('principal'); ?>">Principal</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'principal') ? 'active' : '' ?>" aria-current="page" href="<?php echo base_url('principal'); ?>">Principal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('quienes_somos'); ?>">Quienes somos</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'quienes_somos') ? 'active' : '' ?>" href="<?php echo base_url('quienes_somos'); ?>">Quienes somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('comercializacion'); ?>">Comercializacion</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'comercializacion') ? 'active' : '' ?>" href="<?php echo base_url('comercializacion'); ?>">Comercializacion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('consulta2'); ?>">Consultas</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'consulta2') ? 'active' : '' ?>" href="<?php echo base_url('consulta2'); ?>">Consultas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'terminos_y_usos') ? 'active' : '' ?>" href="<?php echo base_url('terminos_y_usos'); ?>">Terminos y Condiciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('catalogo'); ?>">
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'catalogo') ? 'active' : '' ?>" href="<?php echo base_url('catalogo'); ?>">
                         Nuestro catálogo
                     </a>
                 </li>
-
                 <li class="nav-item p-1">
-                        
-                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('/carrito'); ?>"><img
-                                src="<?php echo base_url('assets/img/carrito.png'); ?>" class="img-fluid"
-                                style="width: 30px; height: 30px; object-fit: contain;"></a>
-                    
-                    </li>
-
-
-
+                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('/carrito'); ?>"><img
+                            src="<?php echo base_url('assets/img/carrito.png'); ?>" class="img-fluid"
+                            style="width: 30px; height: 30px; object-fit: contain;"></a>
+                </li>
                 <li class="nav-item">
                     <a class="btn btn-danger" href="<?php echo base_url('cerrar-inicio'); ?>">
                         Cerrar sesión
@@ -103,32 +95,32 @@ $perfil = $session->get('perfil_id');
             <!-- Navbar para administradores -->
             <?php if ($perfil == "1") : ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('crud_usuarios'); ?>">
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'crud_usuarios') ? 'active' : '' ?>" href="<?php echo base_url('crud_usuarios'); ?>">
                         CRUD Usuarios
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/crud'); ?>">
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'crud') ? 'active' : '' ?>" href="<?php echo base_url('/crud'); ?>">
                         CRUD Productos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/crud_categorias'); ?>">
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'crud_categorias') ? 'active' : '' ?>" href="<?php echo base_url('/crud_categorias'); ?>">
                         CRUD Categorías
                     </a>
                 </li> 
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/consultas_view'); ?>">
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'consultas_view') ? 'active' : '' ?>" href="<?php echo base_url('/consultas_view'); ?>">
                         Ver Contacto
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/consultas2_view'); ?>">
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'consultas2_view') ? 'active' : '' ?>" href="<?php echo base_url('/consultas2_view'); ?>">
                         Ver Consultas
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/listar_ventas'); ?>">
+                    <a class="nav-link <?= ($uri->getSegment(1) == 'listar_ventas') ? 'active' : '' ?>" href="<?php echo base_url('/listar_ventas'); ?>">
                         Mostrar Ventas
                     </a>
                 </li>

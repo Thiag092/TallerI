@@ -343,3 +343,15 @@ margin-right: 30px;
   margin-right: 20px !important;
   
 }
+
+
+/* Define el color de los enlaces en estado hover */
+.navbar-nav .nav-link:hover {
+    color: rgb(214,51,124);
+}
+
+/* Define el color de los enlaces activos */
+.navbar-nav .nav-link.active {
+    color: rgb(214,51,124);
+    font-weight: bold;
+}
