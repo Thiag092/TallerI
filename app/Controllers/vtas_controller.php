@@ -15,11 +15,18 @@ class vtas_controller extends Controller {
 
 	}
   public function ver_ventas() {
-        
-   $dato['titulo']='Registro'; 
-
+    $dato['titulo'] = 'Registro'; 
     $v_ventas_cabecera = new ventasCabecera_model();
-    
+
+    // Obtener los valores de filtro de fechas
+    $start_date = $this->request->getGet('start_date');
+    $end_date = $this->request->getGet('end_date');
+
+    if ($start_date && $end_date) {
+        $v_ventas_cabecera->where('fecha >=', $start_date);
+        $v_ventas_cabecera->where('fecha <=', $end_date);
+    }
+
     $dato['v_ventas_cabecera'] = $v_ventas_cabecera->findAll();
 
     echo view('Plantillas/encabezado', $dato);
