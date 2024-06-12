@@ -32,7 +32,7 @@
             <button type="submit" class="btn btn-primary">Filtrar</button>
             <button class="btn btn-success btn-sm" onclick="location.href='<?= base_url('crud'); ?>'">
                 <img src="<?= base_url('assets/img/back.png'); ?>" alt="Recargar" width="24" height="24">
-            </button>
+            </button> 
         </form>
     </div>
 
