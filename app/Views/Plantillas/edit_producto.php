@@ -1,7 +1,7 @@
 <div class="container-fluid p-4">
     <a class="btn btn-primary" href="<?php echo base_url('/crud') ?>"><h5>Volver</h5></a>
     <div class="text-center">
-        <h2 class="">Edicion de Producto</h2>
+        <h2 class="">Edición de Producto</h2>
     </div>
 
     <!-- Validación -->
@@ -98,8 +98,12 @@
                 <div class="col-12">
                     <h5>Opcionalmente puede cambiarla:</h5>
                     <div class="file">
-                        <label for="formGroupExampleInput">Imagen</label>
-                        <input type="file" name="imagen">
+                        <label for="imagen" class="form-label" style="font-weight: bold;">Imagen</label>
+                        <div class="input-group">
+                            <input type="file" name="imagen" id="imagen" class="form-control" style="display: none;" onchange="updateFileName(this)">
+                            <input type="text" class="form-control" readonly>
+                            <button type="button" class="btn btn-success" onclick="document.getElementById('imagen').click();">Seleccionar archivo</button>
+                        </div>
                         <?php if ($validation->getError('imagen')): ?>
                             <div class='alert alert-danger mt-2'>
                                 <?= $validation->getError('imagen'); ?>
@@ -110,9 +114,15 @@
             </div>
 
             <div class="text-center row-12">
-                
                 <button class="w-25 btn btn-primary btn-sm" type="submit">Guardar</button>
             </div>
         </form>
     </div>
 </div>
+
+<script>
+    function updateFileName(input) {
+        var fileName = input.files[0].name;
+        input.nextElementSibling.value = fileName;
+    }
+</script>
