@@ -99,20 +99,27 @@ class usuario_controller extends Controller{
 
 //aca entra cuando voy al CRUD USUARIOS en la barra de navegacion-----------------------------------------
 
-    public function cargar_crud($id = null)
-  {
+public function cargar_crud($id = null) {
+  $data['titulo'] = 'CRUD Usuarios';
+  $v_usuarios_model = new usuario_model();
+  $v_perfiles_model = new perfiles_model();
 
-    $data['titulo'] = 'CRUD Usuarios';
-    $v_usuarios_model = new usuario_model();
-    $data['usuarios'] = $v_usuarios_model->findAll();
+  // Obtener el término de búsqueda si existe
+  $search = $this->request->getGet('search');
 
-    $v_perfiles_model = new perfiles_model();
-    $data['perfiles'] = $v_perfiles_model->findAll();
-
-    echo view('Plantillas/encabezado', $data);
-        echo view('Plantillas/crud_users');
-        echo view('Plantillas/footer');
+  if ($search) {
+      $v_usuarios_model->like('nombre', $search);
+      $v_usuarios_model->orLike('apellido', $search);
+      $v_usuarios_model->orLike('nombre_usuario', $search);
   }
+
+  $data['usuarios'] = $v_usuarios_model->findAll();
+  $data['perfiles'] = $v_perfiles_model->findAll();
+
+  echo view('Plantillas/encabezado', $data);
+  echo view('Plantillas/crud_users', $data);
+  echo view('Plantillas/footer');
+}
 
 
 

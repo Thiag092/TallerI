@@ -12,9 +12,22 @@
             <button class="w-25 btn btn-primary btn-sm" onclick="location.href='<?= base_url('produ-form'); ?>'">Agregar nuevo producto</button>
             <button class="w-25 btn btn-primary btn-sm" onclick="location.href='<?= base_url('produ-eliminados'); ?>'">Ver productos eliminados</button>
         </div>
+        
+        <!-- Formulario de búsqueda -->
+        <div class="text-center p-2">
+            <form method="GET" action="<?= base_url('crud'); ?>">
+                <input type="text" name="search" placeholder="Buscar producto por nombre" class="form-control w-50 d-inline">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+
+                <button class="btn btn-success btn-sm" onclick="location.href='<?= base_url('crud'); ?>'">
+                <img src="<?= base_url('assets/img/back.png'); ?>" alt="Recargar" width="24" height="24">
+            </button>
+                
+            </form>
+        </div>
 
         <div class="row p-2">
-            <table class="table table-bordered table-hover table-striped table-striped ml-3">
+            <table class="table table-bordered table-hover table-striped ml-3">
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>

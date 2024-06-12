@@ -14,7 +14,17 @@ class producto_controller extends Controller {
     public function index()
     {
         $productoModel = new producto_model();
-        $data['productos'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
+        
+        // Obtener el término de búsqueda
+        $search = $this->request->getGet('search');
+        
+        if ($search) {
+            // Si hay un término de búsqueda, filtrar los productos
+            $data['productos'] = $productoModel->like('nombre_prod', $search)->orderBy('id_producto', 'DESC')->findAll();
+        } else {
+            // Si no hay término de búsqueda, obtener todos los productos
+            $data['productos'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
+        }
 
         $categoriaModel = new categoria_model();
         $data['categorias'] = $categoriaModel->orderBy('id', 'DESC')->findAll();
